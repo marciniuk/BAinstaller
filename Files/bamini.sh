@@ -1,19 +1,26 @@
+# ____    _      __  __ _       _ 
+#| __ )  / \    |  \/  (_)_ __ (_)
+#|  _ \ / _ \   | |\/| | | '_ \| |
+#| |_) / ___ \  | |  | | | | | | |
+#|____/_/   \_\ |_|  |_|_|_| |_|_|
+#
+
 #####################
 # Color definitions #
 #####################
 
-if [ -x "$(command -v tput)" ]; then
-  # Foreground
-  bold="$(tput bold)"
-  black="$(tput setaf 0)"
-  green="$(tput setaf 2)"
-  yellow="$(tput setaf 3)"
-  blue="$(tput setaf 4)"
-  reset="$(tput sgr0)"
-  # Background
-  red_bg="$(tput setab 1)"
-  blue_bg="$(tput setab 4)"
-fi
+	if [ -x "$(command -v tput)" ]; then
+		# Foreground
+			bold="$(tput bold)"
+			black="$(tput setaf 0)"
+			green="$(tput setaf 2)"
+			yellow="$(tput setaf 3)"
+			blue="$(tput setaf 4)"
+			reset="$(tput sgr0)"
+		# Background
+			red_bg="$(tput setab 1)"
+			blue_bg="$(tput setab 4)"
+	fi
 
 ######################################################
 
@@ -40,8 +47,8 @@ fi
 		then
 			echo Ok! Get Ready!
 		else
-			exit 0
 			clear
+			exit 0
 		fi
 	cd ~/
 	git clone https://gitlab.com/xXBlackMaskXx/blackarrow
@@ -61,8 +68,8 @@ fi
 		then
 			echo "Ok! Get Ready!"
 		else
-			exit 0
 			clear
+			exit 0
 		fi
 
 	if yay --version &> /dev/null; then
@@ -89,8 +96,8 @@ fi
 		then
 			echo "Ok! Get Ready!"
 		else
-			exit 0
 			clear
+			exit 0
 		fi
 
 	yay
@@ -110,8 +117,8 @@ fi
 		then
 			echo "Ok! Get Ready!"
 		else
-			exit 0
 			clear
+			exit 0
 		fi
 
 	yay -S light i3lock-fancy-git neofetch lolcat figlet ttf-dejavu-sans-mono-powerline-git polybar antigen-git lightdm-gtk-greeter xorg-server xdg-user-dirs 
@@ -130,8 +137,8 @@ fi
 		then
 			echo "Ok! Get Ready!"
 		else
-			exit 0
 			clear
+			exit 0
 		fi
 
 	systemctl enable lightdm.service
@@ -151,8 +158,8 @@ fi
 		then
 			echo "Ok! Get Ready!"
 		else
-			exit 0
 			clear
+			exit 0
 		fi
 
 	cd ~/
@@ -220,4 +227,17 @@ fi
 # | '_ \| __\ \ /\ / /      | |  | | | / __|/ _ \   / _ \ | '__/ __| '_ \      #####
 # | |_) | |_ \ V  V / _ _   | |  | |_| \__ \  __/  / ___ \| | | (__| | | |    ### ###
 # |_.__/ \__| \_/\_(_|_|_) |___|  \__,_|___/\___| /_/   \_\_|  \___|_| |_|   ###   ###
+#
+#
+# __  __           _        _           
+#|  \/  | __ _  __| | ___  | |__  _   _ 
+#| |\/| |/ _` |/ _` |/ _ \ | '_ \| | | |
+#| |  | | (_| | (_| |  __/ | |_) | |_| |
+#|_|  |_|\__,_|\__,_|\___| |_.__/ \__, |
+#                                 |___/ 
+#    _       _      _               __  __                _       _       _   
+#   / \   __| |_ __(_) __ _ _ __   |  \/  | __ _ _ __ ___(_)_ __ (_)_   _| | __
+#  / _ \ / _` | '__| |/ _` | '_ \  | |\/| |/ _` | '__/ __| | '_ \| | | | | |/ /
+# / ___ \ (_| | |  | | (_| | | | | | |  | | (_| | | | (__| | | | | | |_| |   < 
+#/_/   \_\__,_|_|  |_|\__,_|_| |_| |_|  |_|\__,_|_|  \___|_|_| |_|_|\__,_|_|\_\
 #
