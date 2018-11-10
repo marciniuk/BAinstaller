@@ -27,6 +27,7 @@
 ###############
 # Przywitanie #
 ###############
+
 	clear
 	echo "${black}${blue_bg} BlackArrow installer 1/6 - Welcome in BlackArrow Installer ${reset}
 	"
@@ -54,6 +55,7 @@
 	git clone https://gitlab.com/xXBlackMaskXx/blackarrow
 	cd
 	clear
+
 ##########################################################
 # Checking if AUR Helper is installed (sprawdzanie yay?) #
 ##########################################################
@@ -103,6 +105,7 @@
 	yay
 	sudo pacman -S i3-gaps compton termite pamixer rofi nitrogen ttf-font-awesome ttf-dejavu neovim zsh polkit-gnome qutebrowser unclutter xcape
 	clear
+
 ##################
 # Programy z AUR #
 ##################
@@ -123,6 +126,7 @@
 
 	yay -S light i3lock-fancy-git neofetch lolcat figlet ttf-dejavu-sans-mono-powerline-git polybar antigen-git lightdm-gtk-greeter xorg-server xdg-user-dirs 
 	clear
+
 ###################################
 # Komendy po instalacji programów #
 ###################################
@@ -144,6 +148,7 @@
 	systemctl enable lightdm.service
 	xdg-user-dirs-update
 	clear
+
 #######################
 # Przenoszenie plików #
 #######################
@@ -174,6 +179,7 @@
 	sudo cp -r ~/blackarrow/blackarrow/.scripts ~/
 	sudo cp -r ~/blackarrow/blackarrow/.config ~/
 	clear
+
 ##########
 # Koniec #
 ##########
@@ -228,13 +234,12 @@
 # | |_) | |_ \ V  V / _ _   | |  | |_| \__ \  __/  / ___ \| | | (__| | | |    ### ###
 # |_.__/ \__| \_/\_(_|_|_) |___|  \__,_|___/\___| /_/   \_\_|  \___|_| |_|   ###   ###
 #
-#
 # __  __           _        _           
-#|  \/  | __ _  __| | ___  | |__  _   _ 
-#| |\/| |/ _` |/ _` |/ _ \ | '_ \| | | |
-#| |  | | (_| | (_| |  __/ | |_) | |_| |
-#|_|  |_|\__,_|\__,_|\___| |_.__/ \__, |
-#                                 |___/ 
+#|  \/  | __ _  __| | ___  | |__  _   _   _
+#| |\/| |/ _` |/ _` |/ _ \ | '_ \| | | | (_)
+#| |  | | (_| | (_| |  __/ | |_) | |_| |  _ 
+#|_|  |_|\__,_|\__,_|\___| |_.__/ \__, | (_)
+#                                 |___/    
 #    _       _      _               __  __                _       _       _   
 #   / \   __| |_ __(_) __ _ _ __   |  \/  | __ _ _ __ ___(_)_ __ (_)_   _| | __
 #  / _ \ / _` | '__| |/ _` | '_ \  | |\/| |/ _` | '__/ __| | '_ \| | | | | |/ /

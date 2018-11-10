@@ -3,29 +3,31 @@
 #| |_ | | | | | |  | || '_ \/ __| __/ _` | | |/ _` | __| |/ _ \| '_ \
 #|  _|| |_| | | |  | || | | \__ \ || (_| | | | (_| | |_| | (_) | | | |
 #|_|   \__,_|_|_| |___|_| |_|___/\__\__,_|_|_|\__,_|\__|_|\___/|_| |_|
+#
 
 #####################
 # Color definitions #
 #####################
 
-if [ -x "$(command -v tput)" ]; then
-  # Foreground
-  bold="$(tput bold)"
-  black="$(tput setaf 0)"
-  green="$(tput setaf 2)"
-  yellow="$(tput setaf 3)"
-  blue="$(tput setaf 4)"
-  reset="$(tput sgr0)"
-  # Background
-  red_bg="$(tput setab 1)"
-  blue_bg="$(tput setab 4)"
-fi
+	if [ -x "$(command -v tput)" ]; then
+	# Foreground
+		bold="$(tput bold)"
+		black="$(tput setaf 0)"
+		green="$(tput setaf 2)"
+		yellow="$(tput setaf 3)"
+		blue="$(tput setaf 4)"
+		reset="$(tput sgr0)"
+	# Background
+		red_bg="$(tput setab 1)"
+		blue_bg="$(tput setab 4)"
+	fi
 
 ######################################################
 
 ###############
 # Przywitanie #
 ###############
+
 	clear
 	echo "${black}${blue_bg} BlackArrow installer 1/6 - Welcome in BlackArrow Installer ${reset}
 	"
@@ -53,6 +55,7 @@ fi
 	git clone https://gitlab.com/xXBlackMaskXx/blackarrow
 	cd
 	clear
+
 ##########################################################
 # Checking if AUR Helper is installed (sprawdzanie yay?) #
 ##########################################################
@@ -81,6 +84,7 @@ fi
 	  rm -rf yay
 	fi
 	clear
+
 ###################
 # Programy z repo #
 ###################
@@ -102,6 +106,7 @@ fi
 	yay
 	sudo pacman -S i3-gaps compton termite pamixer rofi nitrogen ttf-font-awesome ttf-dejavu neovim zsh polkit-gnome qutebrowser unclutter xcape
 	clear
+
 ##################
 # Programy z AUR #
 ##################
@@ -122,6 +127,7 @@ fi
 
 	yay -S light i3lock-fancy-git neofetch lolcat figlet ttf-dejavu-sans-mono-powerline-git polybar antigen-git lightdm-gtk-greeter xorg-server xdg-user-dirs 
 	clear
+
 ###################################
 # Komendy po instalacji programów #
 ###################################
@@ -143,6 +149,7 @@ fi
 	systemctl enable lightdm.service
 	xdg-user-dirs-update
 	clear
+
 #######################
 # Przenoszenie plików #
 #######################
@@ -173,6 +180,7 @@ fi
 	sudo cp -r ~/blackarrow/blackarrow/.scripts ~/
 	sudo cp -r ~/blackarrow/blackarrow/.config ~/
 	clear
+
 ##########
 # Koniec #
 ##########
