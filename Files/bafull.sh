@@ -179,6 +179,21 @@
 	sudo cp .zshrc ~/
 	sudo cp -r ~/blackarrow/blackarrow/.scripts ~/
 	sudo cp -r ~/blackarrow/blackarrow/.config ~/
+	cd ~/.config/nvim
+	mkdir bundle && cd bundle
+		git clone https://github.com/Shougo/deoplete.nvim
+		git clone https://github.com/junegunn/goyo.vim
+		git clone https://github.com/PotatoesMaster/i3-vim-syntax
+		git clone https://github.com/itchyny/lightline.vim
+		git clone https://github.com/rafaqz/ranger.vim
+		git clone https://github.com/romainl/vim-cool
+		git clone https://github.com/octol/vim-cpp-enhanced-highlight
+		git clone https://github.com/ap/vim-css-color
+		git clone https://github.com/itchyny/vim-gitbranch
+		git clone https://github.com/reedes/vim-pencil
+		git clone https://github.com/tpope/vim-speeddating
+	cd ~/
+		sudo mv ~/BlackArrowGit/blackarrow/.config/lightline-biual ~/.config/nvim/bundle
 	clear
 
 ##########
