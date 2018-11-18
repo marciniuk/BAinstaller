@@ -5,6 +5,10 @@
 #|_|   \__,_|_|_| |___|_| |_|___/\__\__,_|_|_|\__,_|\__|_|\___/|_| |_|
 #
 
+# Jeszcze nie gotowe nyh
+echo "This installer is not ready yet. Please use bamini.sh"
+exit 0
+
 #####################
 # Color definitions #
 #####################
