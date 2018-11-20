@@ -129,7 +129,7 @@ exit 0
 			clear
 		fi
 
-	yay -S gnome-font-viewer zsh-syntax-highlighting light i3lock-fancy-git neofetch lolcat figlet ttf-dejavu-sans-mono-powerline-git polybar antigen-git lightdm-gtk-greeter xorg-server xdg-user-dirs 
+	yay -S gsimplecal gnome-font-viewer zsh-syntax-highlighting light i3lock-fancy-git neofetch lolcat figlet ttf-dejavu-sans-mono-powerline-git polybar antigen-git lightdm-gtk-greeter xorg-server xdg-user-dirs 
 	clear
 
 ###################################
