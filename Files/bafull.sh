@@ -46,7 +46,7 @@ exit 0
 	!!! Installer intended for clean (empty) system installations! If you already have your configuration files,
 	make a copy of them or cancel BlackArrow installations !!!
 	"
-		#zap
+		#FAQ
 		read -p "Are you sure you want to continue? <y/N> " prompt
 		if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]]
 		then
@@ -68,7 +68,7 @@ exit 0
 	"
 	echo "We will check if you have "yay""
 
-		#zap
+		#FAQ
 		read -p "Are you sure you want to continue? <y/N> " prompt
 		if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]]
 		then
@@ -97,7 +97,7 @@ exit 0
 	"
 	echo "Now we will install the necessary programs"
 
-		#zap
+		#FAQ
 		read -p "Are you sure you want to continue? <y/N> " prompt
 		if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]]
 		then
@@ -119,7 +119,7 @@ exit 0
 	"
 	echo "Other necessary programs :D "
 
-		#zap
+		#FAQ
 		read -p "Are you sure you want to continue? <y/N> " prompt
 		if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]]
 		then
@@ -136,11 +136,11 @@ exit 0
 # Komendy po instalacji programów #
 ###################################
 
-	echo "${black}${blue_bg} BlackArrow installer 4/6 - Starting programs ${reset}
+	echo "${black}${blue_bg} BlackArrow installer 4/6 - Configuring programs ${reset}
 	"
 	echo "Now we will launch the programs"
 
-		#zap
+		#FAQ
 		read -p "Are you sure you want to continue? <y/N> " prompt
 		if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]]
 		then
@@ -152,6 +152,7 @@ exit 0
 
 	systemctl enable lightdm.service
 	xdg-user-dirs-update
+	nitrogen --set-auto ~/wallpaper/wallpaper.jpg
 	clear
 
 #######################
@@ -162,7 +163,7 @@ exit 0
 	"
 	echo "And finally transferring configuration files! Required root password (used "sudo" command). You can interrupt and move configurations manually. The commands you need are at the very bottom of the blackarrow.sh file"
 
-		#zap
+		#FAQ
 		read -p "Are you sure you want to continue? <y/N> " prompt
 		if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]]
 		then
@@ -173,10 +174,12 @@ exit 0
 		fi
 
 	cd ~/
+	sudo mkdir wallpaper
 	sudo mkdir ~/OldC&S
 	sudo mv ~/.config ~/OldC&S
 	sudo mv ~/.scripts ~/OldC&S
 	cd ~/blackarrow/blackarrow/
+	sudo cp ~/files/wallpaper.jpg ~/wallpaper
 	sudo cp .profile ~/
 	sudo cp .xprofile ~/
 	sudo cp .Xresources ~/
