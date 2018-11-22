@@ -154,38 +154,43 @@ exit 0
 
 	cd ~/
 	sudo mkdir wallpaper
-#		cp ~/blackarrow/blackarrow/wallpaper.jpg ~/wallpaper
-	sudo mkdir ~/OldC&S
-		sudo mv ~/.config ~/OldC&S
-		sudo mv ~/.scripts ~/OldC&S
-		sudo mv ~/.profile ~/OldC&S
-		sudo mv ~/.xprofile ~/OldC&S
-		sudo mv ~/.Xresources ~/OldC&S
-		sudo mv ~/.termite ~/OldC&S
-		sudo mv ~/.zshrc ~/OldC&S
+		cp ~/blackarrow/blackarrow/wallpaper.jpg ~/wallpaper
+	sudo mkdir ~/OldC
+		sudo mv ~/.config ~/OldC
+		sudo mv ~/.scripts ~/OldC
+		sudo mv ~/.profile ~/OldC
+		sudo mv ~/.xprofile ~/OldC
+		sudo mv ~/.Xresources ~/OldC
+		sudo mv ~/.termite ~/OldC
+		sudo mv ~/.zshrc ~/OldC
+		sudo mv ~/.antigen ~/OldC
 	cd ~/blackarrow/blackarrow/
 	sudo cp ~/files/wallpaper.jpg ~/wallpaper
 	sudo cp .profile ~/
 	sudo cp .xprofile ~/
 	sudo cp .Xresources ~/
 	sudo cp .zshrc ~/
+	sudo cp -r ~/blackarrow/blackarrow/.antigen ~/
+		sudo mkdir ~/.antigen/bundle && cd ~/.antigen/bundle
+			git clone https://github.com/robbyrussell/oh-my-zsh
+			git clone https://github.com/zsh-users/zsh-syntax-highlighting
 	sudo cp -r ~/blackarrow/blackarrow/.scripts ~/
 	sudo cp -r ~/blackarrow/blackarrow/.config ~/
-	sudo mkdir ~/.config/nvim/bundle && cd ~/.config/nvim/bundle
-		git clone https://github.com/Shougo/deoplete.nvim
-		git clone https://github.com/junegunn/goyo.vim
-		git clone https://github.com/PotatoesMaster/i3-vim-syntax
-		git clone https://github.com/itchyny/lightline.vim
-		git clone https://github.com/rafaqz/ranger.vim
-		git clone https://github.com/romainl/vim-cool
-		git clone https://github.com/octol/vim-cpp-enhanced-highlight
-		git clone https://github.com/ap/vim-css-color
-		git clone https://github.com/itchyny/vim-gitbranch
-		git clone https://github.com/reedes/vim-pencil
-		git clone https://github.com/tpope/vim-speeddating
-		sudo cp ~/.config/lightline-biual ~/.config/nvim/bundle
+		sudo mkdir ~/.config/nvim/bundle && cd ~/.config/nvim/bundle
+			git clone https://github.com/Shougo/deoplete.nvim
+			git clone https://github.com/junegunn/goyo.vim
+			git clone https://github.com/PotatoesMaster/i3-vim-syntax
+			git clone https://github.com/itchyny/lightline.vim
+			git clone https://github.com/rafaqz/ranger.vim
+			git clone https://github.com/romainl/vim-cool
+			git clone https://github.com/octol/vim-cpp-enhanced-highlight
+			git clone https://github.com/ap/vim-css-color
+			git clone https://github.com/itchyny/vim-gitbranch
+			git clone https://github.com/reedes/vim-pencil
+			git clone https://github.com/tpope/vim-speeddating
+			sudo cp ~/.config/lightline-biual ~/.config/nvim/bundle
 	cd ~/
-	sudo chown -R $USER ~/OldC&S
+	sudo chown -R $USER ~/OldC
 	sudo chown -R $USER ~/wallpaper
 	sudo chown $USER ~/.profile
 	sudo chown $USER ~/.xprofile
@@ -193,6 +198,7 @@ exit 0
 	sudo chown $USER ~/.zshrc
 	sudo chown -R $USER ~/.scripts
 	sudo chown -R $USER ~/.config
+	sudo chown -R $USER ~/.antigen
 	clear
 
 ###################################
