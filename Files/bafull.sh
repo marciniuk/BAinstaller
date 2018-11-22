@@ -106,7 +106,7 @@
 		fi
 
 	yay
-	sudo pacman -S i3-gaps compton termite thunar pamixer papirus-icon-theme rofi nitrogen ttf-font-awesome ttf-dejavu neovim zsh polkit-gnome qutebrowser unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter
+	sudo pacman -S i3-gaps compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi nitrogen ttf-font-awesome ttf-dejavu neovim zsh polkit-gnome qutebrowser unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter
 	clear
 
 ##################
