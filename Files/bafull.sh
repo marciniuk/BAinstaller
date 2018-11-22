@@ -7,10 +7,6 @@
 #|_|   \__,_|_|_| |___|_| |_|___/\__\__,_|_|_|\__,_|\__|_|\___/|_| |_|
 #
 
-# Jeszcze nie gotowe nyh
-echo "This installer is not ready yet. Please use bamini.sh"
-exit 0
-
 #####################
 # Color definitions #
 #####################
@@ -153,7 +149,7 @@ exit 0
 		fi
 
 	cd ~/
-	sudo mkdir wallpaper
+	sudo mkdir wallpaper && sudo chown -R $USER ~/wallpaper
 		cp ~/blackarrow/blackarrow/wallpaper.jpg ~/wallpaper
 	sudo mkdir ~/OldC
 		sudo mv ~/.config ~/OldC
@@ -165,18 +161,13 @@ exit 0
 		sudo mv ~/.zshrc ~/OldC
 		sudo mv ~/.antigen ~/OldC
 	cd ~/blackarrow/blackarrow/
-	sudo cp ~/files/wallpaper.jpg ~/wallpaper
 	sudo cp .profile ~/
 	sudo cp .xprofile ~/
 	sudo cp .Xresources ~/
 	sudo cp .zshrc ~/
-	sudo cp -r ~/blackarrow/blackarrow/.antigen ~/
-		sudo mkdir ~/.antigen/bundle && cd ~/.antigen/bundle
-			git clone https://github.com/robbyrussell/oh-my-zsh
-			git clone https://github.com/zsh-users/zsh-syntax-highlighting
 	sudo cp -r ~/blackarrow/blackarrow/.scripts ~/
 	sudo cp -r ~/blackarrow/blackarrow/.config ~/
-		sudo mkdir ~/.config/nvim/bundle && cd ~/.config/nvim/bundle
+		sudo mkdir ~/.config/nvim/bundle && cd ~/.config/nvim/bundle && sudo chown -R $USER ~/.config
 			git clone https://github.com/Shougo/deoplete.nvim
 			git clone https://github.com/junegunn/goyo.vim
 			git clone https://github.com/PotatoesMaster/i3-vim-syntax
@@ -188,17 +179,14 @@ exit 0
 			git clone https://github.com/itchyny/vim-gitbranch
 			git clone https://github.com/reedes/vim-pencil
 			git clone https://github.com/tpope/vim-speeddating
-			sudo cp ~/.config/lightline-biual ~/.config/nvim/bundle
+			cp ~/.config/lightline-biual ~/.config/nvim/bundle
 	cd ~/
 	sudo chown -R $USER ~/OldC
-	sudo chown -R $USER ~/wallpaper
 	sudo chown $USER ~/.profile
 	sudo chown $USER ~/.xprofile
 	sudo chown $USER ~/.Xresources
 	sudo chown $USER ~/.zshrc
 	sudo chown -R $USER ~/.scripts
-	sudo chown -R $USER ~/.config
-	sudo chown -R $USER ~/.antigen
 	clear
 
 ###################################
@@ -222,6 +210,7 @@ exit 0
 	systemctl enable lightdm.service
 	xdg-user-dirs-update
 	nitrogen --set-auto ~/wallpaper/wallpaper.jpg
+	chsh -s /usr/bin/zsh
 	clear
 
 ##########
