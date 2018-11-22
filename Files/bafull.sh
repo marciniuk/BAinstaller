@@ -1,4 +1,5 @@
 #!/bin/bash
+# test
 # _____      _ _   ___           _        _ _       _   _
 #|  ___|   _| | | |_ _|_ __  ___| |_ __ _| | | __ _| |_(_) ___  _ __
 #| |_ | | | | | |  | || '_ \/ __| __/ _` | | |/ _` | __| |/ _ \| '_ \
@@ -109,7 +110,7 @@ exit 0
 		fi
 
 	yay
-	sudo pacman -S i3-gaps compton termite pamixer rofi nitrogen ttf-font-awesome ttf-dejavu neovim zsh polkit-gnome qutebrowser unclutter xcape | pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter
+	sudo pacman -S i3-gaps compton termite pamixer rofi nitrogen ttf-font-awesome ttf-dejavu neovim zsh polkit-gnome qutebrowser unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter
 	clear
 
 ##################
