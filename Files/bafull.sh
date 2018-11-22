@@ -149,8 +149,8 @@
 		fi
 
 	cd ~/
-	sudo mkdir wallpaper && sudo chown -R $USER ~/wallpaper
-		cp ~/blackarrow/blackarrow/wallpaper.jpg ~/wallpaper
+	sudo mkdir /home/wallpaper && sudo chown -R $USER /home/wallpaper
+		cp ~/blackarrow/blackarrow/wallpaper.jpg /home/wallpaper
 	sudo mkdir ~/OldC
 		sudo mv ~/.config ~/OldC
 		sudo mv ~/.scripts ~/OldC
