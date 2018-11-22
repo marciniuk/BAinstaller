@@ -154,12 +154,14 @@ exit 0
 
 	cd ~/
 	sudo mkdir wallpaper
+#		cp ~/blackarrow/blackarrow/wallpaper.jpg ~/wallpaper
 	sudo mkdir ~/OldC&S
 		sudo mv ~/.config ~/OldC&S
 		sudo mv ~/.scripts ~/OldC&S
 		sudo mv ~/.profile ~/OldC&S
 		sudo mv ~/.xprofile ~/OldC&S
 		sudo mv ~/.Xresources ~/OldC&S
+		sudo mv ~/.termite ~/OldC&S
 		sudo mv ~/.zshrc ~/OldC&S
 	cd ~/blackarrow/blackarrow/
 	sudo cp ~/files/wallpaper.jpg ~/wallpaper
