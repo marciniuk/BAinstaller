@@ -106,7 +106,7 @@
 		fi
 
 	yay
-	sudo pacman -S i3-gaps compton termite pamixer rofi nitrogen ttf-font-awesome ttf-dejavu neovim zsh polkit-gnome qutebrowser unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter
+	sudo pacman -S i3-gaps compton termite thunar pamixer rofi nitrogen ttf-font-awesome ttf-dejavu neovim zsh polkit-gnome qutebrowser unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter
 	clear
 
 ##################
@@ -127,7 +127,7 @@
 			clear
 		fi
 
-	yay -S zsh-syntax-highlighting light i3lock-fancy-git ttf-dejavu-sans-mono-powerline-git polybar antigen-git 
+	yay -S zsh-syntax-highlighting light i3lock-fancy-git ttf-dejavu-sans-mono-powerline-git polybar antigen-git oomox 
 	clear
 
 ######################
@@ -165,7 +165,10 @@
 	sudo cp .xprofile ~/
 	sudo cp .Xresources ~/
 	sudo cp .zshrc ~/
+	sudo cp .gtkrc-2.0 ~/
 	sudo cp -r ~/blackarrow/blackarrow/.scripts ~/
+	sudo cp -r ~/blackarrow/blackarrow/.themes ~/
+	sudo cp -r ~/blackarrow/blackarrow/themes /usr/share/
 	sudo cp -r ~/blackarrow/blackarrow/.config ~/
 		sudo mkdir ~/.config/nvim/bundle && cd ~/.config/nvim/bundle && sudo chown -R $USER ~/.config
 			git clone https://github.com/Shougo/deoplete.nvim
@@ -187,6 +190,8 @@
 	sudo chown $USER ~/.Xresources
 	sudo chown $USER ~/.zshrc
 	sudo chown -R $USER ~/.scripts
+	sudo chown -R $USER ~/.themes
+	sudo chown $USER ~/.gtkrc-2.0
 	clear
 
 ###################################
