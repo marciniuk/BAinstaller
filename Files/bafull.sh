@@ -169,6 +169,8 @@
 	sudo cp -r ~/blackarrow/blackarrow/.scripts ~/
 	sudo cp -r ~/blackarrow/blackarrow/.themes ~/
 	sudo cp -r ~/blackarrow/blackarrow/themes /usr/share/
+	sudo cp -r ~/blackarrow/blackarrow/backgrounds /usr/share/
+	sudo cp -r ~/blackarrow/blackarrow/lightdm /etc 
 	sudo cp -r ~/blackarrow/blackarrow/.config ~/
 		sudo mkdir ~/.config/nvim/bundle && cd ~/.config/nvim/bundle && sudo chown -R $USER ~/.config
 			git clone https://github.com/Shougo/deoplete.nvim
