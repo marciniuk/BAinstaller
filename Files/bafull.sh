@@ -1,3 +1,4 @@
+#!/bin/bash
 # _____      _ _   ___           _        _ _       _   _
 #|  ___|   _| | | |_ _|_ __  ___| |_ __ _| | | __ _| |_(_) ___  _ __
 #| |_ | | | | | |  | || '_ \/ __| __/ _` | | |/ _` | __| |/ _ \| '_ \
@@ -108,7 +109,7 @@ exit 0
 		fi
 
 	yay
-	sudo pacman -S i3-gaps compton termite pamixer rofi nitrogen ttf-font-awesome ttf-dejavu neovim zsh polkit-gnome qutebrowser unclutter xcape
+	sudo pacman -S i3-gaps compton termite pamixer rofi nitrogen ttf-font-awesome ttf-dejavu neovim zsh polkit-gnome qutebrowser unclutter xcape | pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter
 	clear
 
 ##################
@@ -129,37 +130,14 @@ exit 0
 			clear
 		fi
 
-	yay -S pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting light i3lock-fancy-git neofetch lolcat figlet ttf-dejavu-sans-mono-powerline-git polybar antigen-git lightdm-gtk-greeter xorg-server xdg-user-dirs 
+	yay -S zsh-syntax-highlighting light i3lock-fancy-git ttf-dejavu-sans-mono-powerline-git polybar antigen-git 
 	clear
 
-###################################
-# Komendy po instalacji programów #
-###################################
-
-	echo "${black}${blue_bg} BlackArrow installer 4/6 - Configuring programs ${reset}
-	"
-	echo "Now we will launch the programs"
-
-		#FAQ
-		read -p "Are you sure you want to continue? <y/N> " prompt
-		if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]]
-		then
-			echo "Ok! Get Ready!"
-		else
-			exit 0
-			clear
-		fi
-
-	systemctl enable lightdm.service
-	xdg-user-dirs-update
-	nitrogen --set-auto ~/wallpaper/wallpaper.jpg
-	clear
-
-#######################
+######################
 # Przenoszenie plików #
 #######################
 
-	echo "${black}${blue_bg} BlackArrow installer 5/6 - Moving configs ${reset}
+	echo "${black}${blue_bg} BlackArrow installer 4/6 - Moving configs ${reset}
 	"
 	echo "And finally transferring configuration files! Required root password (used "sudo" command). You can interrupt and move configurations manually. The commands you need are at the very bottom of the blackarrow.sh file"
 
@@ -176,8 +154,12 @@ exit 0
 	cd ~/
 	sudo mkdir wallpaper
 	sudo mkdir ~/OldC&S
-	sudo mv ~/.config ~/OldC&S
-	sudo mv ~/.scripts ~/OldC&S
+		sudo mv ~/.config ~/OldC&S
+		sudo mv ~/.scripts ~/OldC&S
+		sudo mv ~/.profile ~/OldC&S
+		sudo mv ~/.xprofile ~/OldC&S
+		sudo mv ~/.Xresources ~/OldC&S
+		sudo mv ~/.zshrc ~/OldC&S
 	cd ~/blackarrow/blackarrow/
 	sudo cp ~/files/wallpaper.jpg ~/wallpaper
 	sudo cp .profile ~/
@@ -186,8 +168,7 @@ exit 0
 	sudo cp .zshrc ~/
 	sudo cp -r ~/blackarrow/blackarrow/.scripts ~/
 	sudo cp -r ~/blackarrow/blackarrow/.config ~/
-	cd ~/.config/nvim
-	mkdir bundle && cd bundle
+	sudo mkdir ~/.config/nvim/bundle && cd ~/.config/nvim/bundle
 		git clone https://github.com/Shougo/deoplete.nvim
 		git clone https://github.com/junegunn/goyo.vim
 		git clone https://github.com/PotatoesMaster/i3-vim-syntax
@@ -199,8 +180,39 @@ exit 0
 		git clone https://github.com/itchyny/vim-gitbranch
 		git clone https://github.com/reedes/vim-pencil
 		git clone https://github.com/tpope/vim-speeddating
+		sudo cp ~/.config/lightline-biual ~/.config/nvim/bundle
 	cd ~/
-		sudo mv ~/BlackArrowGit/blackarrow/.config/lightline-biual ~/.config/nvim/bundle
+	sudo chown -R $USER ~/OldC&S
+	sudo chown -R $USER ~/wallpaper
+	sudo chown $USER ~/.profile
+	sudo chown $USER ~/.xprofile
+	sudo chown $USER ~/.Xresources
+	sudo chown $USER ~/.zshrc
+	sudo chown -R $USER ~/.scripts
+	sudo chown -R $USER ~/.config
+	clear
+
+###################################
+# Komendy po instalacji programów #
+###################################
+
+	echo "${black}${blue_bg} BlackArrow installer 5/6 - Configuring programs ${reset}
+	"
+	echo "Now we will launch the programs"
+
+		#FAQ
+		read -p "Are you sure you want to continue? <y/N> " prompt
+		if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]]
+		then
+			echo "Ok! Get Ready!"
+		else
+			exit 0
+			clear
+		fi
+
+	systemctl enable lightdm.service
+	xdg-user-dirs-update
+	nitrogen --set-auto ~/wallpaper/wallpaper.jpg
 	clear
 
 ##########
