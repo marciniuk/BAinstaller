@@ -127,7 +127,7 @@
 			clear
 		fi
 
-	yay -S zsh-syntax-highlighting light i3lock-fancy-git ttf-dejavu-sans-mono-powerline-git polybar antigen-git oomox 
+	yay -S zsh-syntax-highlighting light i3lock-fancy-git ttf-dejavu-sans-mono-powerline-git polybar antigen-git 
 	clear
 
 ######################
