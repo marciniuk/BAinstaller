@@ -5,6 +5,17 @@
 #|____/_/   \_\ |_|  |_|_|_| |_|_|
 #
 
+#!!!!!!!!!!!!!!!!!!!!#
+# Czasowe wyłączenie #
+#!!!!!!!!!!!!!!!!!!!!#
+
+echo "The ~bamini~ installer has been temporarily disabled due to errors. 
+Please use ~bafull~ or wait for the repair of this installer (I don't know 
+when it will happen - I focus on the development of the full version)."
+exit 0
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 #####################
 # Color definitions #
 #####################
