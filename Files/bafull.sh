@@ -50,7 +50,7 @@
 			clear
 		fi
 	
-	if cd ~/; then echo ""; else echo "Fail: cd ~/"; fi
+	if cd ~/ &> /dev/null; then echo ""; else echo "Fail: cd ~/"; fi
 	git clone https://gitlab.com/xXBlackMaskXx/blackarrow
 	clear
 
@@ -155,7 +155,7 @@
 		sudo mv ~/.termite ~/OldC
 		sudo mv ~/.zshrc ~/OldC
 		sudo mv ~/.antigen ~/OldC
-	if cd ~/blackarrow/blackarrow/; then echo ""; else echo "Fail: cd ~/blackarrow/blackarrow/"; fi
+	if cd ~/blackarrow/blackarrow/ &> /dev/null; then echo ""; else echo "Fail: cd ~/blackarrow/blackarrow/"; fi
 	sudo cp .profile ~/
 	sudo cp .xprofile ~/
 	sudo cp .Xresources ~/
@@ -180,7 +180,7 @@
 			git clone https://github.com/reedes/vim-pencil
 			git clone https://github.com/tpope/vim-speeddating
 			cp ~/.config/lightline-biual ~/.config/nvim/bundle
-	if cd ~/; then echo ""; else echo "Fail: cd ~/"; fi
+	if cd ~/ &> /dev/null; then echo ""; else echo "Fail: cd ~/"; fi
 	sudo chown -R "$USER" ~/OldC
 	sudo chown "$USER" ~/.profile
 	sudo chown "$USER" ~/.xprofile
