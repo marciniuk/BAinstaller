@@ -102,7 +102,7 @@
 		fi
 
 	yay
-	sudo pacman -S i3-gaps compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi nitrogen ttf-font-awesome ttf-dejavu neovim zsh polkit-gnome qutebrowser unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter
+	yes | LC_ALL=en_US.UTF-8 sudo pacman --needed -S i3-gaps compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi nitrogen ttf-font-awesome ttf-dejavu neovim zsh polkit-gnome qutebrowser unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter
 	clear
 
 ##################
@@ -123,7 +123,7 @@
 			clear
 		fi
 
-	yay -S zsh-syntax-highlighting light i3lock-fancy-git ttf-dejavu-sans-mono-powerline-git polybar antigen-git 
+	yes | LC_ALL=en_US.UTF-8 yay --needed -S zsh-syntax-highlighting light i3lock-fancy-git ttf-dejavu-sans-mono-powerline-git polybar antigen-git 
 	clear
 
 ######################
@@ -268,4 +268,16 @@
 # | '_ \| __\ \ /\ / /      | |  | | | / __|/ _ \   / _ \ | '__/ __| '_ \     #####
 # | |_) | |_ \ V  V / _ _   | |  | |_| \__ \  __/  / ___ \| | | (__| | | |   ### ###
 # |_.__/ \__| \_/\_(_|_|_) |___|  \__,_|___/\___| /_/   \_\_|  \___|_| |_|  ###   ###
+#
+# __  __           _        _           
+#|  \/  | __ _  __| | ___  | |__  _   _   _
+#| |\/| |/ _` |/ _` |/ _ \ | '_ \| | | | (_)
+#| |  | | (_| | (_| |  __/ | |_) | |_| |  _ 
+#|_|  |_|\__,_|\__,_|\___| |_.__/ \__, | (_)
+#                                 |___/    
+#    _       _      _               __  __                _       _       _   
+#   / \   __| |_ __(_) __ _ _ __   |  \/  | __ _ _ __ ___(_)_ __ (_)_   _| | __
+#  / _ \ / _` | '__| |/ _` | '_ \  | |\/| |/ _` | '__/ __| | '_ \| | | | | |/ /
+# / ___ \ (_| | |  | | (_| | | | | | |  | | (_| | | | (__| | | | | | |_| |   < 
+#/_/   \_\__,_|_|  |_|\__,_|_| |_| |_|  |_|\__,_|_|  \___|_|_| |_|_|\__,_|_|\_\
 #
