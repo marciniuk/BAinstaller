@@ -222,7 +222,7 @@
 	echo "${black}${blue_bg}${bold} BlackArrow installer 6/6 - Ending ${reset}
 	"
 
-	echo "	
+	echo "${bold}
 	                      ##
 	                     ####
 	                    ######
@@ -242,7 +242,7 @@
 	      ####                          ####
 	     ###                              ###
 	    #                                    #
-	"
+	${reset}"
 
 	read -r -p "Thanks for using my installer! I'm hoping that you'll like my job! But... are you sure you want to leave??? <y>" prompt
 	if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]]
