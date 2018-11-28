@@ -102,7 +102,7 @@
 		fi
 
 	yay
-	yes | LC_ALL=en_US.UTF-8 sudo pacman --needed -S i3-gaps python-pip compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi nitrogen ttf-font-awesome ttf-dejavu neovim zsh polkit-gnome qutebrowser unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter
+	yes | LC_ALL=en_US.UTF-8 sudo pacman --needed -S i3-gaps python-pip compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi nitrogen ttf-dejavu neovim zsh polkit-gnome qutebrowser unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter
 	clear
 
 ##################
@@ -178,6 +178,7 @@
 		sudo cp -r ~/blackarrow/blackarrow/themes /usr/share/
 		sudo cp -r ~/blackarrow/blackarrow/backgrounds /usr/share/
 		sudo cp -r ~/blackarrow/blackarrow/lightdm /etc 
+		sudo cp -r ~/blackarrow/blackarrow/fonts/* ~/.local/share/fonts/
 			#.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/i3/ ~/.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/polybar/ ~/.config
