@@ -8,9 +8,9 @@
 #                                       |___/        |_|                        
 #
 
-#####################
-# Color definitions #
-#####################
+##################### @@@@@@@@@@@@@@@@@@@@@@@@
+# Color definitions # @ Definiowanie kolorów @
+##################### @@@@@@@@@@@@@@@@@@@@@@@@
 
 	if [ -x "$(command -v tput)" ]; then
 	# Foreground
@@ -22,23 +22,23 @@
 		blue_bg="$(tput setab 4)"
 	fi
 
-##################
-# Ustalanie daty #
-##################
+################ @@@@@@@@@@@@@@@@@@
+# Date setting # @ Ustawanie daty @
+################ @@@@@@@@@@@@@@@@@@
 
-Data=$(date '+%d-%m-%y')
-Data2=$(date '+%H')
-Data3=$(date '+%M')
-Data4=$(date '+%S')
+Date=$(date '+%d-%m-%y')
+Date2=$(date '+%H')
+Date3=$(date '+%M')
+Date4=$(date '+%S')
 
 ######################################################
 
-###############
-# Przywitanie #
-###############
+########### @@@@@@@@@@@@@@@
+# Welcome # @ Przywitanie @
+########### @@@@@@@@@@@@@@@
 
 	clear
-	echo "${black}${blue_bg}${bold} BlackArrow Config Update 1/X - Welcome in BlackArrow Config Update ${reset}
+	echo "${black}${blue_bg}${bold} BlackArrow Config Update 1/2 - Welcome in BlackArrow Config Update ${reset}
 	"
 	echo "${blue}	 ____  _            _        _                           
 	| __ )| | __ _  ___| | __   / \\   _ __ _ __ _____      __
@@ -61,17 +61,21 @@ Data4=$(date '+%S')
 		clear
 	fi																							
 
-###################################################
-# Utworzenie folderów oraz pobranie nowych plików #
-###################################################
+############################################### @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# Creating folders and downloading new files  # @ Tworzenie folderów oraz pobieranie nowych plików @
+############################################### @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 	if cd ~/ &> /dev/null; then echo ""; else echo "Fail: cd ~/"; fi
 		mkdir OldC &> /dev/null
-		mkdir OldC/moved\ $Data\ $Data2:$Data3:$Data4
-	mv ~/blackarrow ~/OldC/moved\ $Data\ $Data2:$Data3:$Data4
+		mkdir OldC/moved\ "$Date"\ "$Date2":"$Date3":"$Date4"
+	mv ~/blackarrow ~/OldC/moved\ "$Date"\ "$Date2":"$Date3":"$Date4"
 	git clone https://gitlab.com/xXBlackMaskXx/blackarrow
 
-	#stare
+################ @@@@@@@@@@@@@@@@@@@@@@@
+# Moving files # @ Przenoszenie plików @
+################ @@@@@@@@@@@@@@@@@@@@@@@
+
+	#Old @Stare
 	sudo mkdir ~/OldC
 		sudo mv ~/.scripts ~/OldC
 		sudo mv ~/.profile ~/OldC
@@ -91,7 +95,7 @@ Data4=$(date '+%S')
 			sudo mv ~/.config/nitrogen/ ~/OldC
 			sudo mv ~/.config/compton.conf ~/OldC
 			sudo mv ~/.config/nvim/ ~/OldC
-	#przenoszenie
+	#Moving @Przenoszenie
 	if cd ~/blackarrow/blackarrow/ &> /dev/null; then echo ""; else echo "Fail: cd ~/blackarrow/blackarrow/"; fi
 		sudo cp .profile ~/
 		sudo cp .xprofile ~/
@@ -128,7 +132,7 @@ Data4=$(date '+%S')
 					git clone https://github.com/reedes/vim-pencil
 					git clone https://github.com/tpope/vim-speeddating
 					cp -r ~/blackarrow/blackarrow/.config/lightline-biual ~/.config/nvim/bundle
-	#przyznanie uprawnień
+	#Granting permissions @Przyznawanie uprawnień
 	if cd ~/ &> /dev/null; then echo ""; else echo "Fail: cd ~/"; fi
 		sudo chown -R "$USER" ~/OldC
 		sudo chown "$USER" ~/.profile
@@ -140,7 +144,11 @@ Data4=$(date '+%S')
 		sudo chown "$USER" ~/.gtkrc-2.0
 	clear
 
-		echo "${black}${blue_bg}${bold} BlackArrow installer 6/6 - Ending ${reset}
+########## @@@@@@@@@@@@@@@
+# Ending # @ Zakończenie @
+########## @@@@@@@@@@@@@@@
+
+		echo "${black}${blue_bg}${bold} BlackArrow Config Update 2/2 - Ending ${reset}
 	"
 
 	echo "${bold}
@@ -176,20 +184,3 @@ Data4=$(date '+%S')
 	fi
 
 	clear && zsh
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -6,9 +6,9 @@
 #|_|   \__,_|_|_| |___|_| |_|___/\__\__,_|_|_|\__,_|\__|_|\___/|_| |_|
 #
 
-#####################
-# Color definitions #
-#####################
+##################### @@@@@@@@@@@@@@@@@@@@@@@@
+# Color definitions # @ Definiowanie kolorów @
+##################### @@@@@@@@@@@@@@@@@@@@@@@@
 
 	if [ -x "$(command -v tput)" ]; then
 	# Foreground
@@ -22,9 +22,9 @@
 
 ######################################################
 
-###############
-# Przywitanie #
-###############
+########### @@@@@@@@@@@@@@@
+# Welcome # @ Przywitanie @
+########### @@@@@@@@@@@@@@@
 
 	clear
 	echo "${black}${blue_bg}${bold} BlackArrow installer 1/6 - Welcome in BlackArrow Installer ${reset}
@@ -54,9 +54,9 @@
 	git clone https://gitlab.com/xXBlackMaskXx/blackarrow
 	clear
 
-##########################################################
-# Checking if AUR Helper is installed (sprawdzanie yay?) #
-##########################################################
+############################################# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# Checking if AUR Helper is installed (yay) # @ Sprawdzanie czy jest "yay" @
+############################################# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 	echo "${black}${blue_bg}${bold} BlackArrow installer 1,5/6 - Installing AUR Helper ${reset}
 	"
@@ -73,19 +73,19 @@
 		fi
 
 	if yay --version &> /dev/null; then
-	  echo "AUR Helper - Yay is installed"
+		echo "AUR Helper - ~Yay~ is installed"
 	else
-	  git clone https://aur.archlinux.org/yay.git
-	  cd yay || exit
-	  makepkg -si
-	  cd ..
-	  rm -rf yay
+		git clone https://aur.archlinux.org/yay.git
+		cd yay || exit
+		makepkg -si
+		cd ..
+		rm -rf yay
 	fi
 	clear
 
-###################
-# Programy z repo #
-###################
+######################################### @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# Programs from the official repository # @ Programy z oficjalnego repo @
+######################################### @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 	echo "${black}${blue_bg}${bold} BlackArrow installer 2/6 - Installing from repository ${reset}
 	"
@@ -105,9 +105,9 @@
 	yes | LC_ALL=en_US.UTF-8 sudo pacman --needed -S i3-gaps python-pip compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi nitrogen ttf-dejavu neovim zsh polkit-gnome qutebrowser unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter
 	clear
 
-##################
-# Programy z AUR #
-##################
+##################### @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# Programs from AUR # @ Programy z AUR (repo użytkowników) @
+##################### @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 	echo "${black}${blue_bg}${bold} BlackArrow installer 3/6 - Installing from AUR ${reset}
 	"
@@ -126,9 +126,9 @@
 	yes | LC_ALL=en_US.UTF-8 yay --needed -S zsh-syntax-highlighting light i3lock-fancy-git ttf-dejavu-sans-mono-powerline-git polybar antigen-git 
 	clear
 
-######################
-# Przenoszenie plików #
-#######################
+################ @@@@@@@@@@@@@@@@@@@@@@@
+# Moving files # @ Przenoszenie plików @
+################ @@@@@@@@@@@@@@@@@@@@@@@
 
 	echo "${black}${blue_bg}${bold} BlackArrow installer 4/6 - Moving configs ${reset}
 	"
@@ -143,10 +143,10 @@
 			exit 0
 			clear
 		fi
-	# tapeta
+	#Wallpaper @Tapeta
 	sudo mkdir /home/wallpaper && sudo chown -R "$USER" /home/wallpaper
 		cp ~/blackarrow/blackarrow/wallpaper.jpg /home/wallpaper
-	#stare
+	#Old @Stare
 	sudo mkdir ~/OldC
 		sudo mv ~/.scripts ~/OldC
 		sudo mv ~/.profile ~/OldC
@@ -166,7 +166,7 @@
 			sudo mv ~/.config/nitrogen/ ~/OldC
 			sudo mv ~/.config/compton.conf ~/OldC
 			sudo mv ~/.config/nvim/ ~/OldC
-	#przenoszenie
+	#Moving @Przenoszenie
 	if cd ~/blackarrow/blackarrow/ &> /dev/null; then echo ""; else echo "Fail: cd ~/blackarrow/blackarrow/"; fi
 		sudo cp .profile ~/
 		sudo cp .xprofile ~/
@@ -203,7 +203,7 @@
 					git clone https://github.com/reedes/vim-pencil
 					git clone https://github.com/tpope/vim-speeddating
 					cp -r ~/blackarrow/blackarrow/.config/lightline-biual ~/.config/nvim/bundle
-	#przyznanie uprawnień
+	#Granting permissions @Przyznawanie uprawnień
 	if cd ~/ &> /dev/null; then echo ""; else echo "Fail: cd ~/"; fi
 		sudo chown -R "$USER" ~/OldC
 		sudo chown "$USER" ~/.profile
@@ -215,9 +215,9 @@
 		sudo chown "$USER" ~/.gtkrc-2.0
 	clear
 
-###################################
-# Komendy po instalacji programów #
-###################################
+############################### @@@@@@@@@@@@@@@@@@@@@@@@@
+# Commands after installation # @ Komendy po instalacji @
+############################### @@@@@@@@@@@@@@@@@@@@@@@@@
 
 	echo "${black}${blue_bg}${bold} BlackArrow installer 5/6 - Configuring programs ${reset}
 	"
@@ -239,9 +239,9 @@
 	chsh -s /usr/bin/zsh
 	clear
 
-##########
-# Koniec #
-##########
+########## @@@@@@@@@@@@@@@
+# Ending # @ Zakończenie @
+########## @@@@@@@@@@@@@@@
 
 	echo "${black}${blue_bg}${bold} BlackArrow installer 6/6 - Ending ${reset}
 	"
@@ -284,7 +284,7 @@
 	                figlet "Get the fuck out!!!"
 	                exit 0
 	        fi
-		#koniec
+		#end
 	fi
 
 #  _     _                  ___                       _             _           #
