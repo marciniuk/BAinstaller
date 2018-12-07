@@ -238,6 +238,7 @@
 	nitrogen --set-auto ~/wallpaper/wallpaper.jpg
 	chsh -s /usr/bin/zsh
 	mkdir ~/.yay-log
+	mkdir "$(xdg-user-dir PICTURES)"/ScreenShots
 	clear
 
 ########## @@@@@@@@@@@@@@@
