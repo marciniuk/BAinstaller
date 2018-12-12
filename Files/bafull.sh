@@ -239,6 +239,7 @@
 	chsh -s /usr/bin/zsh
 	mkdir ~/.yay-log
 	mkdir "$(xdg-user-dir PICTURES)"/ScreenShots
+	sudo pip3 install neovim
 	clear
 
 ########## @@@@@@@@@@@@@@@
