@@ -146,6 +146,7 @@
 	#Wallpaper @Tapeta
 	sudo mkdir /home/wallpaper && sudo chown -R "$USER" /home/wallpaper
 		cp ~/blackarrow/blackarrow/wallpaper.jpg /home/wallpaper
+		cp ~/blackarrow/blackarrow/wallpaper2.png /home/wallpaper
 	#Old @Stare
 	sudo mkdir ~/OldC
 		sudo mv ~/.scripts ~/OldC
