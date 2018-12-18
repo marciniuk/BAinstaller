@@ -50,7 +50,7 @@
 			clear
 		fi
 	
-	if cd ~/ &> /dev/null; then echo ""; else echo "Fail: cd ~/"; fi
+	if cd ~/ &> /dev/null; then echo ""; else echo "Fail: cd ~/" && exit 0; fi
 	git clone https://gitlab.com/xXBlackMaskXx/blackarrow
 	clear
 
@@ -149,6 +149,8 @@
 		cp ~/blackarrow/blackarrow/wallpaper2.png /home/wallpaper
 	#Old @Stare
 	sudo mkdir ~/OldC
+		if cd /usr/share/themes/oomox-numix 2> /dev/null; then sudo mv /usr/share/themes/oomox-numix ~/OldC && cd || echo ""; else cd || echo ""; fi
+		sudo mv ~/.themes ~/OldC
 		sudo mv ~/.scripts ~/OldC
 		sudo mv ~/.profile ~/OldC
 		sudo mv ~/.xprofile ~/OldC
@@ -176,7 +178,7 @@
 		sudo cp .gtkrc-2.0 ~/
 		sudo cp -r ~/blackarrow/blackarrow/.scripts ~/
 		sudo cp -r ~/blackarrow/blackarrow/.themes ~/
-		sudo cp -r ~/blackarrow/blackarrow/themes /usr/share/
+		sudo cp -r ~/blackarrow/blackarrow/themes/oomox-numix /usr/share/themes
 		sudo cp -r ~/blackarrow/blackarrow/backgrounds /usr/share/
 		sudo cp -r ~/blackarrow/blackarrow/lightdm /etc 
 		sudo cp -r ~/blackarrow/blackarrow/fonts/* ~/.local/share/fonts/
