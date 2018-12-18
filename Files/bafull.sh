@@ -159,6 +159,7 @@
 		sudo mv ~/.zshrc ~/OldC
 		sudo mv ~/.antigen ~/OldC
 			#.config
+			sudo mv ~/.config/gsimplecal ~/OldC
 			sudo mv ~/.config/i3/ ~/OldC
 			sudo mv ~/.config/polybar/ ~/OldC
 			sudo mv ~/.config/termite/ ~/OldC
@@ -183,6 +184,7 @@
 		sudo cp -r ~/blackarrow/blackarrow/lightdm /etc 
 		sudo cp -r ~/blackarrow/blackarrow/fonts/* ~/.local/share/fonts/
 			#.config
+			sudo cp -r ~/blackarrow/blackarrow/.config/gsimplecal ~/.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/i3/ ~/.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/polybar/ ~/.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/termite/ ~/.config
