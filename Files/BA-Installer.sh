@@ -46,8 +46,6 @@
 	${reset}"
 	echo "	Welcome to the installer of my Arch Linux configuration. I hope you will like it!
 
-	!!! Installer intended for clean (empty) system installations! If you already have your configuration files,
-	make a copy of them or cancel BlackArrow installations !!!
 	"
 		#FAQ
 		read -r -p "Are you sure you want to continue? <y/N> " prompt
