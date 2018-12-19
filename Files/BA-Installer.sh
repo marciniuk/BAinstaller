@@ -6,6 +6,15 @@
 #|____/_/   \_\ |___|_| |_|___/\__\__,_|_|_|\___|_|   
 #
 
+################################ @@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# Determining the current date # @ Określanie bieżącej daty @
+################################ @@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+	Data=$(date '+%d-%m-%y')
+	Data2=$(date '+%H')
+	Data3=$(date '+%M')
+	Data4=$(date '+%S')
+
 ##################### @@@@@@@@@@@@@@@@@@@@@@@@
 # Color definitions # @ Definiowanie kolorów @
 ##################### @@@@@@@@@@@@@@@@@@@@@@@@
@@ -102,7 +111,7 @@
 		fi
 
 	yay
-	yes | LC_ALL=en_US.UTF-8 sudo pacman --needed -S i3-gaps wireless_tools python-pip compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi nitrogen ttf-dejavu neovim zsh polkit-gnome unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter
+	yes | LC_ALL=en_US.UTF-8 sudo pacman --needed -S i3-gaps wireless_tools python-pip compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi nitrogen ttf-dejavu neovim zsh polkit-gnome unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter |& tee -a ~/yay-log\ "$Data"\ "$Data2":"$Data3":"$Data4".log
 	clear
 
 ##################### @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -123,7 +132,7 @@
 			clear
 		fi
 
-	yes | LC_ALL=en_US.UTF-8 yay --needed -S zsh-syntax-highlighting light i3lock-fancy-git google-chrome ttf-dejavu-sans-mono-powerline-git polybar antigen-git 
+	yes | LC_ALL=en_US.UTF-8 yay --needed -S zsh-syntax-highlighting light i3lock-fancy-git google-chrome ttf-dejavu-sans-mono-powerline-git polybar antigen-git |& tee -a ~/yay-log\ "$Data"\ "$Data2":"$Data3":"$Data4".log
 	clear
 
 ################ @@@@@@@@@@@@@@@@@@@@@@@
