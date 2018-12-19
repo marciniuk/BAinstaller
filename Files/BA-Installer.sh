@@ -150,26 +150,26 @@
 	#Old @Stare
 	sudo mkdir ~/OldC
 		if cd /usr/share/themes/oomox-numix 2> /dev/null; then sudo mv /usr/share/themes/oomox-numix ~/OldC && cd || echo ""; else cd || echo ""; fi
-		sudo mv ~/.themes ~/OldC
-		sudo mv ~/.scripts ~/OldC
-		sudo mv ~/.profile ~/OldC
-		sudo mv ~/.xprofile ~/OldC
-		sudo mv ~/.Xresources ~/OldC
-		sudo mv ~/.termite ~/OldC
-		sudo mv ~/.zshrc ~/OldC
-		sudo mv ~/.antigen ~/OldC
+		if sudo mv ~/.themes ~/OldC 2> /dev/null; else echo ".themes is empty"
+		if sudo mv ~/.scripts ~/OldC 2> /dev/null; else echo ".scripts is empty"
+		if sudo mv ~/.profile ~/OldC 2> /dev/null; else echo ".profile is empty"
+		if sudo mv ~/.xprofile ~/OldC 2> /dev/null; else echo ".xprofile is empty"
+		if sudo mv ~/.Xresources ~/OldC 2> /dev/null; else echo ".Xresources is empty"
+		if sudo mv ~/.termite ~/OldC 2> /dev/null; else echo ".termite is empty"
+		if sudo mv ~/.zshrc ~/OldC 2> /dev/null; else echo ".zshrc is empty"
+		if sudo mv ~/.antigen ~/OldC 2> /dev/null; else echo ".antigen is empty"
 			#.config
-			sudo mv ~/.config/gsimplecal ~/OldC
-			sudo mv ~/.config/i3/ ~/OldC
-			sudo mv ~/.config/polybar/ ~/OldC
-			sudo mv ~/.config/termite/ ~/OldC
-			sudo mv ~/.config/rofi/ ~/OldC
-			sudo mv ~/.config/ranger/ ~/OldC
-			sudo mv ~/.config/neofetch/ ~/OldC
-			sudo mv ~/.config/gtk-3.0/ ~/OldC
-			sudo mv ~/.config/nitrogen/ ~/OldC
-			sudo mv ~/.config/compton.conf ~/OldC
-			sudo mv ~/.config/nvim/ ~/OldC
+			if sudo mv ~/.config/gsimplecal/ ~/OldC; else echo ".config/gsimplecal/ is empty"
+			if sudo mv ~/.config/i3/ ~/OldC; else echo ".config/i3/ is empty"
+			if sudo mv ~/.config/polybar/ ~/OldC; else echo ".config/polybar/ is empty"
+			if sudo mv ~/.config/termite/ ~/OldC; else echo ".config/termite/ is empty"
+			if sudo mv ~/.config/rofi/ ~/OldC; else echo ".config/rofi/ is empty"
+			if sudo mv ~/.config/ranger/ ~/OldC; else echo ".config/ranger/ is empty"
+			if sudo mv ~/.config/neofetch/ ~/OldC; else echo ".config/neofetch/ is empty"
+			if sudo mv ~/.config/gtk-3.0/ ~/OldC; else echo ".config/gtk-3.0/ is empty"
+			if sudo mv ~/.config/nitrogen/ ~/OldC; else echo ".config/nitrogen/ is empty"
+			if sudo mv ~/.config/compton.conf ~/OldC; else echo ".config/compton.conf is empty"
+			if sudo mv ~/.config/nvim/ ~/OldC; else echo ".config/nvim/ is empty"
 	#Moving @Przenoszenie
 	if cd ~/blackarrow/blackarrow/ &> /dev/null; then echo ""; else echo "Fail: cd ~/blackarrow/blackarrow/"; fi
 		sudo cp .profile ~/
