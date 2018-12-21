@@ -107,7 +107,7 @@
 		fi
 
 	yay
-	yes | LC_ALL=en_US.UTF-8 sudo pacman --needed -S i3-gaps wireless_tools python-pip compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi nitrogen ttf-dejavu neovim zsh polkit-gnome unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter |& tee -a ~/yay-log\ "$Data".log
+	yes | LC_ALL=en_US.UTF-8 sudo pacman --needed -S i3-gaps noto-fonts-emoji dunst wireless_tools python-pip compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi nitrogen ttf-dejavu neovim zsh polkit-gnome unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter |& tee -a ~/yay-log\ "$Data".log
 	clear
 
 ##################### @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -164,6 +164,7 @@
 		if sudo mv ~/.zshrc ~/OldC 2> /dev/null; then echo ""; else echo ".zshrc is empty"; fi
 		if sudo mv ~/.antigen ~/OldC 2> /dev/null; then echo ""; else echo ".antigen is empty"; fi
 			#.config
+			if sudo mv ~/.config/dunst ~/OldC 2> /dev/null; then echo ""; else echo ".config/dunst is empty"; fi
 			if sudo mv ~/.config/dmenu ~/OldC 2> /dev/null; then echo ""; else echo ".config/dmenu is empty"; fi
 			if sudo mv ~/.config/gsimplecal/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/gsimplecal/ is empty"; fi
 			if sudo mv ~/.config/i3/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/i3/ is empty"; fi
@@ -190,6 +191,7 @@
 		sudo cp -r ~/blackarrow/blackarrow/lightdm /etc 
 		sudo cp -r ~/blackarrow/blackarrow/fonts/* ~/.local/share/fonts/
 			#.config
+			sudo cp -r ~/blackarrow/blackarrow/.config/dunst ~/.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/dmenu ~/.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/gsimplecal ~/.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/i3/ ~/.config
