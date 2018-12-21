@@ -26,10 +26,7 @@
 # Date setting # @ Ustawanie daty @
 ################ @@@@@@@@@@@@@@@@@@
 
-Date=$(date '+%d-%m-%y')
-Date2=$(date '+%H')
-Date3=$(date '+%M')
-Date4=$(date '+%S')
+	Data=$(date +%d-%m-%G\ %H:%M:%S)
 
 ######################################################
 
@@ -67,39 +64,41 @@ Date4=$(date '+%S')
 
 	if cd ~/ &> /dev/null; then echo ""; else echo "Fail: cd ~/"; fi
 		mkdir OldC &> /dev/null
-		mkdir OldC/moved\ "$Date"\ "$Date2":"$Date3":"$Date4"
-	mv ~/blackarrow ~/OldC/moved\ "$Date"\ "$Date2":"$Date3":"$Date4"
+		mkdir OldC/moved\ "$Date"
+	mv ~/blackarrow ~/OldC/moved\ "$Date"
 	git clone https://gitlab.com/xXBlackMaskXx/blackarrow
+	git submodule update --init --recursive
 
 ################ @@@@@@@@@@@@@@@@@@@@@@@
 # Moving files # @ Przenoszenie plików @
 ################ @@@@@@@@@@@@@@@@@@@@@@@
 
-		#Old @Stare
+#Old @Stare
 	sudo mkdir ~/OldC
 		if cd /usr/share/themes/oomox-numix 2> /dev/null; then sudo mv /usr/share/themes/oomox-numix ~/OldC && cd || echo ""; else cd || echo ""; fi
-		if sudo mv ~/.themes ~/OldC 2> /dev/null; else echo ".themes is empty"
-		if sudo mv ~/.scripts ~/OldC 2> /dev/null; else echo ".scripts is empty"
-		if sudo mv ~/.profile ~/OldC 2> /dev/null; else echo ".profile is empty"
-		if sudo mv ~/.xprofile ~/OldC 2> /dev/null; else echo ".xprofile is empty"
-		if sudo mv ~/.Xresources ~/OldC 2> /dev/null; else echo ".Xresources is empty"
-		if sudo mv ~/.termite ~/OldC 2> /dev/null; else echo ".termite is empty"
-		if sudo mv ~/.zshrc ~/OldC 2> /dev/null; else echo ".zshrc is empty"
-		if sudo mv ~/.antigen ~/OldC 2> /dev/null; else echo ".antigen is empty"
+		if sudo mv ~/.themes ~/OldC 2> /dev/null; then echo ""; else echo ".themes is empty"; fi
+		if sudo mv ~/.scripts ~/OldC 2> /dev/null; then echo ""; else echo ".scripts is empty"; fi
+		if sudo mv ~/.profile ~/OldC 2> /dev/null; then echo ""; else echo ".profile is empty"; fi
+		if sudo mv ~/.xprofile ~/OldC 2> /dev/null; then echo ""; else echo ".xprofile is empty"; fi
+		if sudo mv ~/.Xresources ~/OldC 2> /dev/null; then echo ""; else echo ".Xresources is empty"; fi
+		if sudo mv ~/.termite ~/OldC 2> /dev/null; then echo ""; else echo ".termite is empty"; fi
+		if sudo mv ~/.zshrc ~/OldC 2> /dev/null; then echo ""; else echo ".zshrc is empty"; fi
+		if sudo mv ~/.antigen ~/OldC 2> /dev/null; then echo ""; else echo ".antigen is empty"; fi
 			#.config
-			if sudo mv ~/.config/gsimplecal/ ~/OldC; else echo ".config/gsimplecal/ is empty"
-			if sudo mv ~/.config/i3/ ~/OldC; else echo ".config/i3/ is empty"
-			if sudo mv ~/.config/polybar/ ~/OldC; else echo ".config/polybar/ is empty"
-			if sudo mv ~/.config/termite/ ~/OldC; else echo ".config/termite/ is empty"
-			if sudo mv ~/.config/rofi/ ~/OldC; else echo ".config/rofi/ is empty"
-			if sudo mv ~/.config/ranger/ ~/OldC; else echo ".config/ranger/ is empty"
-			if sudo mv ~/.config/neofetch/ ~/OldC; else echo ".config/neofetch/ is empty"
-			if sudo mv ~/.config/gtk-3.0/ ~/OldC; else echo ".config/gtk-3.0/ is empty"
-			if sudo mv ~/.config/nitrogen/ ~/OldC; else echo ".config/nitrogen/ is empty"
-			if sudo mv ~/.config/compton.conf ~/OldC; else echo ".config/compton.conf is empty"
-			if sudo mv ~/.config/nvim/ ~/OldC; else echo ".config/nvim/ is empty"
+			if sudo mv ~/.config/dmenu ~/OldC 2> /dev/null; then echo ""; else echo ".config/dmenu is empty"; fi
+			if sudo mv ~/.config/gsimplecal/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/gsimplecal/ is empty"; fi
+			if sudo mv ~/.config/i3/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/i3/ is empty"; fi
+			if sudo mv ~/.config/polybar/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/polybar/ is empty"; fi
+			if sudo mv ~/.config/termite/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/termite/ is empty"; fi
+			if sudo mv ~/.config/rofi/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/rofi/ is empty"; fi
+			if sudo mv ~/.config/ranger/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/ranger/ is empty"; fi
+			if sudo mv ~/.config/neofetch/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/neofetch/ is empty"; fi
+			if sudo mv ~/.config/gtk-3.0/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/gtk-3.0/ is empty"; fi
+			if sudo mv ~/.config/nitrogen/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/nitrogen/ is empty"; fi
+			if sudo mv ~/.config/compton.conf ~/OldC 2> /dev/null; then echo ""; else echo ".config/compton.conf is empty"; fi
+			if sudo mv ~/.config/nvim/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/nvim/ is empty"; fi
 	#Moving @Przenoszenie
-	if cd ~/blackarrow/blackarrow/ &> /dev/null; then echo ""; else echo "Fail: cd ~/blackarrow/blackarrow/"; fi
+	if cd ~/blackarrow/blackarrow/ 2> /dev/null; then echo ""; else echo "Fail: cd ~/blackarrow/blackarrow/"; fi
 		sudo cp .profile ~/
 		sudo cp .xprofile ~/
 		sudo cp .Xresources ~/
@@ -112,6 +111,7 @@ Date4=$(date '+%S')
 		sudo cp -r ~/blackarrow/blackarrow/lightdm /etc 
 		sudo cp -r ~/blackarrow/blackarrow/fonts/* ~/.local/share/fonts/
 			#.config
+			sudo cp -r ~/blackarrow/blackarrow/.config/dmenu ~/.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/gsimplecal ~/.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/i3/ ~/.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/polybar/ ~/.config
