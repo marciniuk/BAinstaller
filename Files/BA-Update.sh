@@ -44,7 +44,7 @@
 	|____/|_|\\__,_|\\___|_|\\_\\/_/   \\_\\_|  |_|  \\___/ \\_/\\_/  
 	${reset}"
 
-	echo "	Welcome to the configuration file update installer. 
+	echo "	Welcome to the configuration files update installer. 
 	The old files will be moved to the folder ~/OldC/[current date]
 	"
 
