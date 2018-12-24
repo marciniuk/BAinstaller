@@ -177,6 +177,8 @@
 			if sudo mv ~/.config/nitrogen/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/nitrogen/ is empty"; fi
 			if sudo mv ~/.config/compton.conf ~/OldC 2> /dev/null; then echo ""; else echo ".config/compton.conf is empty"; fi
 			if sudo mv ~/.config/nvim/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/nvim/ is empty"; fi
+			if sudo mv /etc/systemd/system/lock.service/ ~/OldC 2> /dev/null; then echo ""; else echo "haven't lock.service/"
+			if sudo mv /etc/X11/xorg.conf.d/30-touchpad.conf/ ~/OldC 2> /dev/null; then echo ""; else echo "haven't 30-touchpad.conf/"
 	#Moving @Przenoszenie
 	if cd ~/blackarrow/blackarrow/ 2> /dev/null; then echo ""; else echo "Fail: cd ~/blackarrow/blackarrow/"; fi
 		sudo cp .profile ~/
@@ -204,6 +206,8 @@
 			sudo cp -r ~/blackarrow/blackarrow/.config/nitrogen/ ~/.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/compton.conf ~/.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/nvim ~/.config
+			sudo cp ~/blackarrow/blackarrow/lock.service/ /etc/systemd/system/
+			sudo cp ~/blackarrow/blackarrow/30-touchpad.conf/ /etc/X11/xorg.conf.d/
 				sudo mkdir ~/.config/nvim/bundle && cd ~/.config/nvim/bundle && sudo chown -R "$USER" ~/.config
 					git clone https://github.com/Shougo/deoplete.nvim
 					git clone https://github.com/junegunn/goyo.vim
