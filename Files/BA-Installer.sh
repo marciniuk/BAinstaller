@@ -54,7 +54,7 @@
 			clear
 		fi
 	
-	if cd ~/ &> /dev/null; then echo ""; else echo "Fail: cd ~/" && exit 0; fi
+	if cd ~/ &> /dev/null; then echo ""; else echo "Fail: cd ~/"; fi
 	git clone https://gitlab.com/xXBlackMaskXx/blackarrow
 	git submodule update --init --recursive
 	clear
@@ -154,31 +154,31 @@
 		cp ~/blackarrow/blackarrow/wallpaper2.png /home/wallpaper
 	#Old @Stare
 	sudo mkdir ~/OldC
-		cd /usr/share/themes/oomox-numix 2> /dev/null
-		sudo mv ~/.themes ~/OldC 2> /dev/null
-		sudo mv ~/.scripts ~/OldC 2> /dev/null
-		sudo mv ~/.profile ~/OldC 2> /dev/null
-		sudo mv ~/.xprofile ~/OldC 2> /dev/null
-		sudo mv ~/.Xresources ~/OldC 2> /dev/null
-		sudo mv ~/.termite ~/OldC 2> /dev/null
-		sudo mv ~/.zshrc ~/OldC 2> /dev/null
-		sudo mv ~/.antigen ~/OldC 2> /dev/null
+		sudo mv /usr/share/themes/oomox-numix ~/OldC
+		sudo mv ~/.themes ~/OldC
+		sudo mv ~/.scripts ~/OldC
+		sudo mv ~/.profile ~/OldC
+		sudo mv ~/.xprofile ~/OldC
+		sudo mv ~/.Xresources ~/OldC
+		sudo mv ~/.termite ~/OldC
+		sudo mv ~/.zshrc ~/OldC
+		sudo mv ~/.antigen ~/OldC
 			#.config
-			sudo mv ~/.config/dunst ~/OldC 2> /dev/null
-			sudo mv ~/.config/dmenu ~/OldC 2> /dev/null
-			sudo mv ~/.config/gsimplecal/ ~/OldC 2> /dev/null
-			sudo mv ~/.config/i3/ ~/OldC 2> /dev/null
-			sudo mv ~/.config/polybar/ ~/OldC 2> /dev/null
-			sudo mv ~/.config/termite/ ~/OldC 2> /dev/null
-			sudo mv ~/.config/rofi/ ~/OldC 2> /dev/null
-			sudo mv ~/.config/ranger/ ~/OldC 2> /dev/null
-			sudo mv ~/.config/neofetch/ ~/OldC 2> /dev/null
-			sudo mv ~/.config/gtk-3.0/ ~/OldC 2> /dev/null
-			sudo mv ~/.config/nitrogen/ ~/OldC 2> /dev/null
-			sudo mv ~/.config/compton.conf ~/OldC 2> /dev/null
-			sudo mv ~/.config/nvim/ ~/OldC 2> /dev/null
-			sudo mv /etc/systemd/system/lock.service/ ~/OldC 2> /dev/null
-			sudo mv /etc/X11/xorg.conf.d/30-touchpad.conf/ ~/OldC 2> /dev/null
+			sudo mv ~/.config/dunst ~/OldC
+			sudo mv ~/.config/dmenu ~/OldC
+			sudo mv ~/.config/gsimplecal/ ~/OldC
+			sudo mv ~/.config/i3/ ~/OldC
+			sudo mv ~/.config/polybar/ ~/OldC
+			sudo mv ~/.config/termite/ ~/OldC
+			sudo mv ~/.config/rofi/ ~/OldC
+			sudo mv ~/.config/ranger/ ~/OldC
+			sudo mv ~/.config/neofetch/ ~/OldC
+			sudo mv ~/.config/gtk-3.0/ ~/OldC
+			sudo mv ~/.config/nitrogen/ ~/OldC
+			sudo mv ~/.config/compton.conf ~/OldC
+			sudo mv ~/.config/nvim/ ~/OldC
+			sudo mv /etc/systemd/system/lock.service/ ~/OldC
+			sudo mv /etc/X11/xorg.conf.d/30-touchpad.conf/ ~/OldC
 	#Moving @Przenoszenie
 	if cd ~/blackarrow/blackarrow/ 2> /dev/null; then echo ""; else echo "Fail: cd ~/blackarrow/blackarrow/"; fi
 		sudo cp .profile ~/
