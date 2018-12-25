@@ -154,31 +154,31 @@
 		cp ~/blackarrow/blackarrow/wallpaper2.png /home/wallpaper
 	#Old @Stare
 	sudo mkdir ~/OldC
-		if cd /usr/share/themes/oomox-numix 2> /dev/null; then sudo mv /usr/share/themes/oomox-numix ~/OldC && cd || echo ""; else cd || echo ""; fi
-		if sudo mv ~/.themes ~/OldC 2> /dev/null; then echo ""; else echo ".themes is empty"; fi
-		if sudo mv ~/.scripts ~/OldC 2> /dev/null; then echo ""; else echo ".scripts is empty"; fi
-		if sudo mv ~/.profile ~/OldC 2> /dev/null; then echo ""; else echo ".profile is empty"; fi
-		if sudo mv ~/.xprofile ~/OldC 2> /dev/null; then echo ""; else echo ".xprofile is empty"; fi
-		if sudo mv ~/.Xresources ~/OldC 2> /dev/null; then echo ""; else echo ".Xresources is empty"; fi
-		if sudo mv ~/.termite ~/OldC 2> /dev/null; then echo ""; else echo ".termite is empty"; fi
-		if sudo mv ~/.zshrc ~/OldC 2> /dev/null; then echo ""; else echo ".zshrc is empty"; fi
-		if sudo mv ~/.antigen ~/OldC 2> /dev/null; then echo ""; else echo ".antigen is empty"; fi
+		cd /usr/share/themes/oomox-numix 2> /dev/null
+		sudo mv ~/.themes ~/OldC 2> /dev/null
+		sudo mv ~/.scripts ~/OldC 2> /dev/null
+		sudo mv ~/.profile ~/OldC 2> /dev/null
+		sudo mv ~/.xprofile ~/OldC 2> /dev/null
+		sudo mv ~/.Xresources ~/OldC 2> /dev/null
+		sudo mv ~/.termite ~/OldC 2> /dev/null
+		sudo mv ~/.zshrc ~/OldC 2> /dev/null
+		sudo mv ~/.antigen ~/OldC 2> /dev/null
 			#.config
-			if sudo mv ~/.config/dunst ~/OldC 2> /dev/null; then echo ""; else echo ".config/dunst is empty"; fi
-			if sudo mv ~/.config/dmenu ~/OldC 2> /dev/null; then echo ""; else echo ".config/dmenu is empty"; fi
-			if sudo mv ~/.config/gsimplecal/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/gsimplecal/ is empty"; fi
-			if sudo mv ~/.config/i3/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/i3/ is empty"; fi
-			if sudo mv ~/.config/polybar/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/polybar/ is empty"; fi
-			if sudo mv ~/.config/termite/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/termite/ is empty"; fi
-			if sudo mv ~/.config/rofi/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/rofi/ is empty"; fi
-			if sudo mv ~/.config/ranger/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/ranger/ is empty"; fi
-			if sudo mv ~/.config/neofetch/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/neofetch/ is empty"; fi
-			if sudo mv ~/.config/gtk-3.0/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/gtk-3.0/ is empty"; fi
-			if sudo mv ~/.config/nitrogen/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/nitrogen/ is empty"; fi
-			if sudo mv ~/.config/compton.conf ~/OldC 2> /dev/null; then echo ""; else echo ".config/compton.conf is empty"; fi
-			if sudo mv ~/.config/nvim/ ~/OldC 2> /dev/null; then echo ""; else echo ".config/nvim/ is empty"; fi
-			if sudo mv /etc/systemd/system/lock.service/ ~/OldC 2> /dev/null; then echo ""; else echo "haven't lock.service/"
-			if sudo mv /etc/X11/xorg.conf.d/30-touchpad.conf/ ~/OldC 2> /dev/null; then echo ""; else echo "haven't 30-touchpad.conf/"
+			sudo mv ~/.config/dunst ~/OldC 2> /dev/null
+			sudo mv ~/.config/dmenu ~/OldC 2> /dev/null
+			sudo mv ~/.config/gsimplecal/ ~/OldC 2> /dev/null
+			sudo mv ~/.config/i3/ ~/OldC 2> /dev/null
+			sudo mv ~/.config/polybar/ ~/OldC 2> /dev/null
+			sudo mv ~/.config/termite/ ~/OldC 2> /dev/null
+			sudo mv ~/.config/rofi/ ~/OldC 2> /dev/null
+			sudo mv ~/.config/ranger/ ~/OldC 2> /dev/null
+			sudo mv ~/.config/neofetch/ ~/OldC 2> /dev/null
+			sudo mv ~/.config/gtk-3.0/ ~/OldC 2> /dev/null
+			sudo mv ~/.config/nitrogen/ ~/OldC 2> /dev/null
+			sudo mv ~/.config/compton.conf ~/OldC 2> /dev/null
+			sudo mv ~/.config/nvim/ ~/OldC 2> /dev/null
+			sudo mv /etc/systemd/system/lock.service/ ~/OldC 2> /dev/null
+			sudo mv /etc/X11/xorg.conf.d/30-touchpad.conf/ ~/OldC 2> /dev/null
 	#Moving @Przenoszenie
 	if cd ~/blackarrow/blackarrow/ 2> /dev/null; then echo ""; else echo "Fail: cd ~/blackarrow/blackarrow/"; fi
 		sudo cp .profile ~/
