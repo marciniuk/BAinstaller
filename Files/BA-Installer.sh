@@ -148,6 +148,7 @@
 			exit 0
 			clear
 		fi
+	
 	#Wallpaper @Tapeta
 	sudo mkdir /home/wallpaper && sudo chown -R "$USER" /home/wallpaper
 		cp ~/blackarrow/blackarrow/wallpaper.jpg /home/wallpaper
@@ -191,7 +192,10 @@
 		sudo cp -r ~/blackarrow/blackarrow/themes/oomox-numix /usr/share/themes
 		sudo cp -r ~/blackarrow/blackarrow/backgrounds /usr/share/
 		sudo cp -r ~/blackarrow/blackarrow/lightdm /etc 
-		sudo cp -r ~/blackarrow/blackarrow/fonts/* ~/.local/share/fonts/
+			mkdir ~/.local
+			mkdir ~/.local/share
+			mkdir ~/.local/share/fonts
+		sudo cp ~/blackarrow/blackarrow/fonts/* ~/.local/share/fonts/
 			#.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/dunst ~/.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/dmenu ~/.config
