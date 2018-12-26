@@ -107,7 +107,7 @@
 		fi
 
 	yay
-	sudo pacman --needed -S sxiv maim light i3-gaps xss-lock noto-fonts-emoji dunst wireless_tools python-pip compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi nitrogen ttf-dejavu neovim zsh polkit-gnome unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter |& tee -a ~/yay-log\ "$Data".log
+	sudo pacman --needed -S sxiv mpv maim light i3-gaps xss-lock noto-fonts-emoji dunst wireless_tools python-pip compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi nitrogen ttf-dejavu neovim zsh polkit-gnome unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter |& tee -a ~/yay-log\ "$Data".log
 	clear
 
 ##################### @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -153,6 +153,7 @@
 	sudo mkdir /home/wallpaper && sudo chown -R "$USER" /home/wallpaper
 		cp ~/blackarrow/blackarrow/wallpaper.jpg /home/wallpaper
 		cp ~/blackarrow/blackarrow/wallpaper2.png /home/wallpaper
+		cp ~/blackarrow/blackarrow/wallpaper3.png /home/wallpaper
 	#Old @Stare
 	sudo mkdir ~/OldC
 		sudo mv /usr/share/themes/oomox-numix ~/OldC
