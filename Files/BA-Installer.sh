@@ -56,7 +56,7 @@
 	
 	if cd ~/ &> /dev/null; then echo ""; else echo "Fail: cd ~/"; fi
 	git clone https://gitlab.com/xXBlackMaskXx/blackarrow
-	git submodule update --init --recursive
+	cd ~/blackarrow && git submodule update --init --recursive && cd -
 	clear
 
 ############################################# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
