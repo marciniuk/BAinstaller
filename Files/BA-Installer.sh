@@ -56,7 +56,7 @@
 	
 	if cd ~/ &> /dev/null; then echo ""; else echo "Fail: cd ~/"; fi
 	git clone https://gitlab.com/xXBlackMaskXx/blackarrow
-	cd ~/blackarrow && git submodule update --init --recursive && cd -
+	cd ~/blackarrow && git submodule update --init --recursive && cd - || echo "not working"
 	clear
 
 ############################################# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -181,6 +181,7 @@
 			sudo mv ~/.config/nvim/ ~/OldC
 			sudo mv /etc/systemd/system/lock.service/ ~/OldC
 			sudo mv /etc/X11/xorg.conf.d/30-touchpad.conf/ ~/OldC
+			sudo mv /usr/bin/i3lock-fancy/ ~/OldC
 	#Moving @Przenoszenie
 	if cd ~/blackarrow/blackarrow/ 2> /dev/null; then echo ""; else echo "Fail: cd ~/blackarrow/blackarrow/"; fi
 		sudo cp .profile ~/
@@ -213,6 +214,7 @@
 			sudo cp -r ~/blackarrow/blackarrow/.config/nvim ~/.config
 			sudo cp ~/blackarrow/blackarrow/lock.service/ /etc/systemd/system/
 			sudo cp ~/blackarrow/blackarrow/30-touchpad.conf/ /etc/X11/xorg.conf.d/
+			sudo cp ~/blackarrow/blackarrow/i3lock-fancy/ /usr/bin/i3lock-fancy/	
 				sudo mkdir ~/.config/nvim/bundle && cd ~/.config/nvim/bundle && sudo chown -R "$USER" ~/.config
 					git clone https://github.com/Shougo/deoplete.nvim
 					git clone https://github.com/junegunn/goyo.vim
