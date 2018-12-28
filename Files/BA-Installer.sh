@@ -128,7 +128,7 @@
 			clear
 		fi
 
-	yay --needed -S zsh-syntax-highlighting i3lock-fancy-git google-chrome ttf-dejavu-sans-mono-powerline-git polybar antigen-git |& tee -a ~/yay-log\ "$Data".log
+	yay --needed -S zsh-syntax-highlighting i3lock google-chrome ttf-dejavu-sans-mono-powerline-git polybar antigen-git |& tee -a ~/yay-log\ "$Data".log
 	clear
 
 ################ @@@@@@@@@@@@@@@@@@@@@@@
@@ -156,7 +156,6 @@
 		cp ~/blackarrow/blackarrow/i3lock.png /home/wallpaper
 	#Old @Stare
 	sudo mkdir ~/OldC
-		sudo mv /usr/share/themes/oomox-numix ~/OldC
 		sudo mv ~/.themes ~/OldC
 		sudo mv ~/.scripts ~/OldC
 		sudo mv ~/.profile ~/OldC
@@ -191,7 +190,6 @@
 		sudo cp .gtkrc-2.0 ~/
 		sudo cp -r ~/blackarrow/blackarrow/.scripts ~/
 		sudo cp -r ~/blackarrow/blackarrow/.themes ~/
-		sudo cp -r ~/blackarrow/blackarrow/themes/oomox-numix /usr/share/themes
 		sudo cp -r ~/blackarrow/blackarrow/backgrounds /usr/share/
 		sudo cp -r ~/blackarrow/blackarrow/lightdm /etc 
 			mkdir ~/.local
