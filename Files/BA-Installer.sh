@@ -183,7 +183,6 @@
 		sudo cp .Xresources ~/
 		sudo cp .zshrc ~/
 		sudo cp .gtkrc-2.0 ~/
-		sudo cp -r ~/blackarrow/blackarrow/wallpaper /usr/share/
 		sudo cp -r ~/blackarrow/blackarrow/.scripts ~/
 		sudo cp -r ~/blackarrow/blackarrow/.themes ~/
 		sudo cp -r ~/blackarrow/blackarrow/backgrounds /usr/share/
@@ -232,7 +231,7 @@
 		sudo chown -R "$USER" ~/.scripts
 		sudo chown -R "$USER" ~/.themes
 		sudo chown "$USER" ~/.gtkrc-2.0
-		sudo chown -R "$USER" /usr/share/wallpaper
+		sudo chown -R "$USER" /usr/share/backgrounds
 	clear
 
 ############################### @@@@@@@@@@@@@@@@@@@@@@@@@
