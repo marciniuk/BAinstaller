@@ -107,7 +107,7 @@
 		fi
 
 	yay
-	sudo pacman --needed -S sxiv mpv maim light i3-gaps xss-lock noto-fonts-emoji dunst wireless_tools python-pip compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi nitrogen ttf-dejavu neovim zsh polkit-gnome unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter |& tee -a ~/yay-log\ "$Data".log
+	sudo pacman --needed -S noto-fonts-cjk sxiv mpv maim light i3-gaps xss-lock noto-fonts-emoji dunst wireless_tools python-pip compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi nitrogen ttf-dejavu neovim zsh polkit-gnome unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter |& tee -a ~/yay-log\ "$Data".log
 	clear
 
 ##################### @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -128,7 +128,7 @@
 			clear
 		fi
 
-	yay --needed -S zsh-syntax-highlighting i3lock google-chrome ttf-dejavu-sans-mono-powerline-git polybar antigen-git |& tee -a ~/yay-log\ "$Data".log
+	yay --needed -S zsh-syntax-highlighting ttf-symbola i3lock google-chrome ttf-dejavu-sans-mono-powerline-git polybar antigen-git |& tee -a ~/yay-log\ "$Data".log
 	clear
 
 ################ @@@@@@@@@@@@@@@@@@@@@@@
@@ -149,11 +149,6 @@
 			clear
 		fi
 	
-	#Wallpaper @Tapeta
-	sudo mkdir /home/wallpaper && sudo chown -R "$USER" /home/wallpaper
-		cp ~/blackarrow/blackarrow/wallpaper.jpg /home/wallpaper
-		cp ~/blackarrow/blackarrow/wallpaper2.png /home/wallpaper
-		cp ~/blackarrow/blackarrow/i3lock.png /home/wallpaper
 	#Old @Stare
 	sudo mkdir ~/OldC
 		sudo mv ~/.themes ~/OldC
@@ -188,6 +183,7 @@
 		sudo cp .Xresources ~/
 		sudo cp .zshrc ~/
 		sudo cp .gtkrc-2.0 ~/
+		sudo cp -r ~/blackarrow/blackarrow/wallpaper /usr/share/
 		sudo cp -r ~/blackarrow/blackarrow/.scripts ~/
 		sudo cp -r ~/blackarrow/blackarrow/.themes ~/
 		sudo cp -r ~/blackarrow/blackarrow/backgrounds /usr/share/
@@ -236,6 +232,7 @@
 		sudo chown -R "$USER" ~/.scripts
 		sudo chown -R "$USER" ~/.themes
 		sudo chown "$USER" ~/.gtkrc-2.0
+		sudo chown -R "$USER" /usr/share/wallpaper
 	clear
 
 ############################### @@@@@@@@@@@@@@@@@@@@@@@@@
