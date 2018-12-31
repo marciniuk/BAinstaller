@@ -53,7 +53,8 @@
 			exit 0
 			clear
 		fi
-	
+		#FAQ
+
 	if cd ~/ &> /dev/null; then echo ""; else echo "Fail: cd ~/"; fi
 	git clone https://gitlab.com/xXBlackMaskXx/blackarrow
 	cd ~/blackarrow && git submodule update --init --recursive && cd - || echo "not working"
@@ -76,6 +77,7 @@
 			exit 0
 			clear
 		fi
+		#FAQ
 
 	if yay --version &> /dev/null; then
 		echo "AUR Helper - ~Yay~ is installed"
@@ -105,6 +107,7 @@
 			exit 0
 			clear
 		fi
+		#FAQ
 
 	yay
 	sudo pacman --needed -S noto-fonts-cjk sxiv mpv maim light i3-gaps xss-lock noto-fonts-emoji dunst wireless_tools python-pip compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi nitrogen ttf-dejavu neovim zsh polkit-gnome unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter |& tee -a ~/yay-log\ "$Data".log
@@ -127,6 +130,7 @@
 			exit 0
 			clear
 		fi
+		#FAQ
 
 	yay --needed -S zsh-syntax-highlighting ttf-symbola i3lock google-chrome ttf-dejavu-sans-mono-powerline-git polybar antigen-git |& tee -a ~/yay-log\ "$Data".log
 	clear
@@ -148,7 +152,8 @@
 			exit 0
 			clear
 		fi
-	
+		#FAQ
+
 	#Old @Stare
 	sudo mkdir ~/OldC
 		sudo mv ~/.themes ~/OldC
@@ -251,6 +256,7 @@
 			exit 0
 			clear
 		fi
+		#FAQ
 
 	systemctl enable lightdm.service
 	xdg-user-dirs-update
