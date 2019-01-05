@@ -9,13 +9,11 @@
 ################################ @@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # Determining the current date # @ Określanie bieżącej daty @
 ################################ @@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
 	Data=$(date +%d-%m-%G\ %H:%M:%S)
 
 ##################### @@@@@@@@@@@@@@@@@@@@@@@@
 # Color definitions # @ Definiowanie kolorów @
 ##################### @@@@@@@@@@@@@@@@@@@@@@@@
-
 	if [ -x "$(command -v tput)" ]; then
 	# Foreground
 		bold="$(tput bold)"
@@ -26,12 +24,12 @@
 		blue_bg="$(tput setab 4)"
 	fi
 
-######################################################
+
+#############################################################
 
 ########### @@@@@@@@@@@@@@@
 # Welcome # @ Przywitanie @
 ########### @@@@@@@@@@@@@@@
-
 	clear
 	echo "${black}${blue_bg}${bold} BlackArrow installer 1/6 - Welcome in BlackArrow Installer ${reset}
 	"
@@ -60,10 +58,10 @@
 	cd ~/blackarrow && git submodule update --init --recursive && cd - || echo "not working"
 	clear
 
+
 ############################################# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # Checking if AUR Helper is installed (yay) # @ Sprawdzanie czy jest "yay" @
 ############################################# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
 	echo "${black}${blue_bg}${bold} BlackArrow installer 1,5/6 - Installing AUR Helper ${reset}
 	"
 	echo "We will check if you have ~yay~"
@@ -90,10 +88,10 @@
 	fi
 	clear
 
+
 ######################################### @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # Programs from the official repository # @ Programy z oficjalnego repo @
 ######################################### @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
 	echo "${black}${blue_bg}${bold} BlackArrow installer 2/6 - Installing from repository ${reset}
 	"
 	echo "Now we will install the necessary programs"
@@ -113,10 +111,10 @@
 	sudo pacman --needed -S noto-fonts-cjk sxiv mpv maim light i3-gaps xss-lock noto-fonts-emoji dunst wireless_tools python-pip compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi nitrogen ttf-dejavu neovim zsh polkit-gnome unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter |& tee -a ~/yay-log\ "$Data".log
 	clear
 
+
 ##################### @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # Programs from AUR # @ Programy z AUR (repo użytkowników) @
 ##################### @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
 	echo "${black}${blue_bg}${bold} BlackArrow installer 3/6 - Installing from AUR ${reset}
 	"
 	echo "Other necessary programs :D "
@@ -135,10 +133,10 @@
 	yay --needed -S color-picker zsh-syntax-highlighting ttf-symbola i3lock google-chrome ttf-dejavu-sans-mono-powerline-git polybar antigen-git |& tee -a ~/yay-log\ "$Data".log
 	clear
 
+
 ################ @@@@@@@@@@@@@@@@@@@@@@@
 # Moving files # @ Przenoszenie plików @
 ################ @@@@@@@@@@@@@@@@@@@@@@@
-
 	echo "${black}${blue_bg}${bold} BlackArrow installer 4/6 - Moving configs ${reset}
 	"
 	echo "And finally transferring configuration files! Required root password (used ~sudo~ command). You can interrupt and move configurations manually. The commands you need are at the very bottom of the blackarrow.sh file"
@@ -239,10 +237,10 @@
 		sudo chown -R "$USER" /usr/share/backgrounds
 	clear
 
+
 ############################### @@@@@@@@@@@@@@@@@@@@@@@@@
 # Commands after installation # @ Komendy po instalacji @
 ############################### @@@@@@@@@@@@@@@@@@@@@@@@@
-
 	echo "${black}${blue_bg}${bold} BlackArrow installer 5/6 - Configuring programs ${reset}
 	"
 	echo "Now we will launch the programs"
@@ -269,10 +267,10 @@
 	cd ~/.config/dmenu && sudo make clean install && cd - || echo ""
 	clear
 
+
 ########## @@@@@@@@@@@@@@@
 # Ending # @ Zakończenie @
 ########## @@@@@@@@@@@@@@@
-
 	echo "${black}${blue_bg}${bold} BlackArrow installer 6/6 - Ending ${reset}
 	"
 
