@@ -256,6 +256,7 @@
 		fi
 		#FAQ
 
+	sudo pip3 install ueberzug
 	systemctl enable lightdm.service
 	xdg-user-dirs-update
 	nitrogen --set-auto ~/wallpaper/wallpaper.jpg
