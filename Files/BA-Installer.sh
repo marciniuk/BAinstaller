@@ -173,7 +173,6 @@
 			sudo mv ~/.config/ranger/ ~/OldC
 			sudo mv ~/.config/neofetch/ ~/OldC
 			sudo mv ~/.config/gtk-3.0/ ~/OldC
-			sudo mv ~/.config/nitrogen/ ~/OldC
 			sudo mv ~/.config/compton.conf ~/OldC
 			sudo mv ~/.config/nvim/ ~/OldC
 			sudo mv /etc/systemd/system/lock.service/ ~/OldC
@@ -205,7 +204,6 @@
 			sudo cp -r ~/blackarrow/blackarrow/.config/ranger/ ~/.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/neofetch/ ~/.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/gtk-3.0/ ~/.config
-			sudo cp -r ~/blackarrow/blackarrow/.config/nitrogen/ ~/.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/compton.conf ~/.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/nvim ~/.config
 			sudo cp ~/blackarrow/blackarrow/lock.service/ /etc/systemd/system/
