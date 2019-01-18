@@ -257,7 +257,7 @@
 	sudo pip3 install ueberzug
 	systemctl enable lightdm.service
 	xdg-user-dirs-update
-	nitrogen --set-auto ~/wallpaper/wallpaper.jpg
+	nitrogen --set-scaled ~/wallpaper/wallpaper.jpg
 	chsh -s /usr/bin/zsh
 	mkdir ~/.yay-log
 	mkdir "$(xdg-user-dir PICTURES)"/ScreenShots
