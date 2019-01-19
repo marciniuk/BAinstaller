@@ -108,7 +108,7 @@
 		#FAQ
 
 	yay
-	sudo pacman --needed -S noto-fonts-cjk sxiv mpv maim light i3-gaps xss-lock noto-fonts-emoji dunst wireless_tools python-pip compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi nitrogen ttf-dejavu neovim zsh polkit-gnome unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter |& tee -a ~/yay-log\ "$Data".log
+	sudo pacman --needed -S noto-fonts-cjk sxiv mpv maim light i3-gaps xss-lock noto-fonts-emoji dunst wireless_tools python-pip compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi ttf-dejavu neovim zsh polkit-gnome unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter |& tee -a ~/yay-log\ "$Data".log
 	clear
 
 
@@ -257,13 +257,13 @@
 	sudo pip3 install ueberzug
 	systemctl enable lightdm.service
 	xdg-user-dirs-update
-	nitrogen --set-scaled ~/wallpaper/wallpaper.jpg
 	chsh -s /usr/bin/zsh
 	mkdir ~/.yay-log
 	mkdir "$(xdg-user-dir PICTURES)"/ScreenShots
 	sudo pip3 install neovim
 	yes | LC_ALL=en_US.UTF-8 sudo pacman -Rs rofi-dmenu
 	cd ~/.config/dmenu && sudo make clean install && cd - || echo ""
+	cp /usr/share/backgrounds/wallpaper.jpg "$(xdg-user-dir PICTURES)"/.wallpaper
 	clear
 
 
