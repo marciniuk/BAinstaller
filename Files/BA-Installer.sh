@@ -131,7 +131,7 @@
 		fi
 		#FAQ
 
-	yay --needed -S color-picker zsh-syntax-highlighting ttf-symbola i3lock google-chrome ttf-dejavu-sans-mono-powerline-git polybar antigen-git |& tee -a ~/yay-log\ "$Data".log
+	yay --needed -S color-picker zsh-syntax-highlighting sxiv-rifle ttf-symbola i3lock google-chrome ttf-dejavu-sans-mono-powerline-git polybar antigen-git |& tee -a ~/yay-log\ "$Data".log
 	clear
 
 
