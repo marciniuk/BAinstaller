@@ -109,7 +109,7 @@
 		#FAQ
 
 	yay
-	sudo pacman --needed -S xdotool noto-fonts-cjk sxiv mpv maim light i3-gaps xss-lock noto-fonts-emoji dunst wireless_tools python-pip compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi ttf-dejavu neovim zsh polkit-gnome unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter |& tee -a ~/yay-log\ "$Data".log
+	sudo pacman --needed -S sddm xdotool noto-fonts-cjk sxiv mpv maim light i3-gaps xss-lock noto-fonts-emoji dunst wireless_tools python-pip compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi ttf-dejavu neovim zsh polkit-gnome unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs |& tee -a ~/yay-log\ "$Data".log
 	clear
 
 
@@ -163,6 +163,8 @@
 		sudo mv ~/.termite ~/OldC
 		sudo mv ~/.zshrc ~/OldC
 		sudo mv ~/.antigen ~/OldC
+		sudo mv /usr/lib/sddm ~/OldC
+		sudo mv /usr/share/sddm/themes/chili/ ~/OldC
 			#.config
 			sudo mv ~/.config/dunst ~/OldC
 			sudo mv ~/.config/dmenu ~/OldC
@@ -186,10 +188,11 @@
 		sudo cp .Xresources ~/
 		sudo cp .zshrc ~/
 		sudo cp .gtkrc-2.0 ~/
+		sudo cp -r ~/blackarrow/blackarrow/sddm /usr/lib/sddm
+		sudo cp -r ~/blackarrow/blackarrow/chili /usr/share/sddm/themes/chili
 		sudo cp -r ~/blackarrow/blackarrow/.scripts ~/
 		sudo cp -r ~/blackarrow/blackarrow/.themes ~/
 		sudo cp -r ~/blackarrow/blackarrow/backgrounds /usr/share/
-		sudo cp -r ~/blackarrow/blackarrow/lightdm /etc 
 			mkdir ~/.local
 			mkdir ~/.local/share
 			mkdir ~/.local/share/fonts
@@ -256,7 +259,7 @@
 		#FAQ
 
 	sudo pip3 install ueberzug
-	systemctl enable lightdm.service
+	sudo systemctl enable sddm.service
 	xdg-user-dirs-update
 	chsh -s /usr/bin/zsh
 	mkdir ~/.yay-log
