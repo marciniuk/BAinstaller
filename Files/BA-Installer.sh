@@ -109,7 +109,7 @@
 		#FAQ
 
 	yay
-	sudo pacman --needed -S sddm xdotool noto-fonts-cjk sxiv mpv maim light i3-gaps xss-lock noto-fonts-emoji dunst wireless_tools python-pip compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi ttf-dejavu neovim zsh polkit-gnome unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs |& tee -a ~/yay-log\ "$Data".log
+	sudo pacman --needed -S kirigami2 xwallpaper htop lxappearance sddm qt5ct qt5-styleplugins xdotool noto-fonts-cjk sxiv mpv maim light i3-gaps xss-lock noto-fonts-emoji dunst wireless_tools python-pip compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi ttf-dejavu neovim zsh polkit-gnome unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs |& tee -a ~/yay-log\ "$Data".log
 	clear
 
 
