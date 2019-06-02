@@ -214,6 +214,7 @@
 			sudo cp ~/blackarrow/blackarrow/30-touchpad.conf/ /etc/X11/xorg.conf.d/
 			sudo cp ~/blackarrow/blackarrow/i3lock-fancy/ /usr/bin/i3lock-fancy/
 				sudo mkdir ~/.config/nvim/bundle && cd ~/.config/nvim/bundle && sudo chown -R "$USER" ~/.config
+					git clone https://github.com/tpope/vim-commentary
 					git clone https://github.com/Shougo/deoplete.nvim
 					git clone https://github.com/junegunn/goyo.vim
 					git clone https://github.com/PotatoesMaster/i3-vim-syntax
