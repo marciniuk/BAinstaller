@@ -1,9 +1,9 @@
 #!/bin/bash
-# ____    _      ___           _        _ _           
-#| __ )  / \    |_ _|_ __  ___| |_ __ _| | | ___ _ __ 
+# ____    _      ___           _        _ _
+#| __ )  / \    |_ _|_ __  ___| |_ __ _| | | ___ _ __
 #|  _ \ / _ \    | || '_ \/ __| __/ _` | | |/ _ \ '__|
-#| |_) / ___ \   | || | | \__ \ || (_| | | |  __/ |   
-#|____/_/   \_\ |___|_| |_|___/\__\__,_|_|_|\___|_|   
+#| |_) / ___ \   | || | | \__ \ || (_| | | |  __/ |
+#|____/_/   \_\ |___|_| |_|___/\__\__,_|_|_|\___|_|
 #
 
 ################################ @@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -34,11 +34,11 @@
 	clear
 	echo "${black}${blue_bg}${bold} BlackArrow installer 1/6 - Welcome in BlackArrow Installer ${reset}
 	"
-	echo "${blue}	 ____  _            _        _                           
+	echo "${blue}	 ____  _            _        _
 	| __ )| | __ _  ___| | __   / \\   _ __ _ __ _____      __
 	|  _ \\| |/ _\` |/ __| |/ /  / _ \\ | '__| '__/ _ \\ \\ /\\ / /
-	| |_) | | (_| | (__|   <  / ___ \\| |  | | | (_) \\ V  V / 
-	|____/|_|\\__,_|\\___|_|\\_\\/_/   \\_\\_|  |_|  \\___/ \\_/\\_/  
+	| |_) | | (_| | (__|   <  / ___ \\| |  | | | (_) \\ V  V /
+	|____/|_|\\__,_|\\___|_|\\_\\/_/   \\_\\_|  |_|  \\___/ \\_/\\_/
 	${reset}"
 	echo "	Welcome to the installer of my Arch Linux configuration. I hope you will like it!
 
@@ -212,7 +212,7 @@
 			sudo cp -r ~/blackarrow/blackarrow/.config/nvim ~/.config
 			sudo cp ~/blackarrow/blackarrow/lock.service/ /etc/systemd/system/
 			sudo cp ~/blackarrow/blackarrow/30-touchpad.conf/ /etc/X11/xorg.conf.d/
-			sudo cp ~/blackarrow/blackarrow/i3lock-fancy/ /usr/bin/i3lock-fancy/	
+			sudo cp ~/blackarrow/blackarrow/i3lock-fancy/ /usr/bin/i3lock-fancy/
 				sudo mkdir ~/.config/nvim/bundle && cd ~/.config/nvim/bundle && sudo chown -R "$USER" ~/.config
 					git clone https://github.com/Shougo/deoplete.nvim
 					git clone https://github.com/junegunn/goyo.vim
@@ -225,6 +225,7 @@
 					git clone https://github.com/itchyny/vim-gitbranch
 					git clone https://github.com/reedes/vim-pencil
 					git clone https://github.com/tpope/vim-speeddating
+					git clone https://github.com/bronson/vim-trailing-whitespace
 					cp -r ~/blackarrow/blackarrow/.config/lightline-biual ~/.config/nvim/bundle
 	#Granting permissions @Przyznawanie uprawnień
 	if cd ~/ &> /dev/null; then echo ""; else echo "Fail: cd ~/"; fi
@@ -325,15 +326,15 @@
 # | |_) | |_ \ V  V / _ _    | | (_) | |_| | | |_| \__ \  __/  / ___ \| | | (__| | | |  _|  __/   ### ###
 # |_.__/ \__| \_/\_(_|_|_)   |_|\___/ \__,_|  \__,_|___/\___| /_/   \_\_|  \___|_| |_| (_)_|     ###   ###
 #
-# __  __           _        _           
+# __  __           _        _
 #|  \/  | __ _  __| | ___  | |__  _   _   _
 #| |\/| |/ _` |/ _` |/ _ \ | '_ \| | | | (_)
-#| |  | | (_| | (_| |  __/ | |_) | |_| |  _ 
+#| |  | | (_| | (_| |  __/ | |_) | |_| |  _
 #|_|  |_|\__,_|\__,_|\___| |_.__/ \__, | (_)
-#                                 |___/    
-#    _       _      _               __  __                _       _       _   
+#                                 |___/
+#    _       _      _               __  __                _       _       _
 #   / \   __| |_ __(_) __ _ _ __   |  \/  | __ _ _ __ ___(_)_ __ (_)_   _| | __
 #  / _ \ / _` | '__| |/ _` | '_ \  | |\/| |/ _` | '__/ __| | '_ \| | | | | |/ /
-# / ___ \ (_| | |  | | (_| | | | | | |  | | (_| | | | (__| | | | | | |_| |   < 
+# / ___ \ (_| | |  | | (_| | | | | | |  | | (_| | | | (__| | | | | | |_| |   <
 #/_/   \_\__,_|_|  |_|\__,_|_| |_| |_|  |_|\__,_|_|  \___|_|_| |_|_|\__,_|_|\_\
 #

@@ -1,11 +1,11 @@
 #!/bin/bash
 #
-# ____    _       ____             __ _         _   _           _       _       
-#| __ )  / \     / ___|___  _ __  / _(_) __ _  | | | |_ __   __| | __ _| |_ ___ 
+# ____    _       ____             __ _         _   _           _       _
+#| __ )  / \     / ___|___  _ __  / _(_) __ _  | | | |_ __   __| | __ _| |_ ___
 #|  _ \ / _ \   | |   / _ \| '_ \| |_| |/ _` | | | | | '_ \ / _` |/ _` | __/ _ \
 #| |_) / ___ \  | |__| (_) | | | |  _| | (_| | | |_| | |_) | (_| | (_| | ||  __/
 #|____/_/   \_\  \____\___/|_| |_|_| |_|\__, |  \___/| .__/ \__,_|\__,_|\__\___|
-#                                       |___/        |_|                        
+#                                       |___/        |_|
 #
 
 ##################### @@@@@@@@@@@@@@@@@@@@@@@@
@@ -37,14 +37,14 @@
 	clear
 	echo "${black}${blue_bg}${bold} BlackArrow Config Update 1/2 - Welcome in BlackArrow Config Update ${reset}
 	"
-	echo "${blue}	 ____  _            _        _                           
+	echo "${blue}	 ____  _            _        _
 	| __ )| | __ _  ___| | __   / \\   _ __ _ __ _____      __
 	|  _ \\| |/ _\` |/ __| |/ /  / _ \\ | '__| '__/ _ \\ \\ /\\ / /
-	| |_) | | (_| | (__|   <  / ___ \\| |  | | | (_) \\ V  V / 
-	|____/|_|\\__,_|\\___|_|\\_\\/_/   \\_\\_|  |_|  \\___/ \\_/\\_/  
+	| |_) | | (_| | (__|   <  / ___ \\| |  | | | (_) \\ V  V /
+	|____/|_|\\__,_|\\___|_|\\_\\/_/   \\_\\_|  |_|  \\___/ \\_/\\_/
 	${reset}"
 
-	echo "	Welcome to the configuration files update installer. 
+	echo "	Welcome to the configuration files update installer.
 	The old files will be moved to the folder ~/OldC/[current date]
 	"
 
@@ -56,18 +56,18 @@
 	else
 		exit 0
 		clear
-	fi																							
+	fi
 
 ####################### @@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # Checking the update # @ Sprawdzanie aktualizacji @
 ####################### @@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 	yes | LC_ALL=en_US.UTF-8 yay
-	
+
 	yes | LC_ALL=en_US.UTF-8 sudo pacman --needed -S i3-gaps noto-fonts-emoji dunst wireless_tools python-pip compton termite thunar 			   pamixer papirus-icon-theme telegram-desktop rofi nitrogen ttf-dejavu neovim zsh polkit-gnome unclutter xcape pacman-contrib 					  gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs lightdm-gtk-greeter 					 |& tee -a ~/yay-log\ "$Data".log
-	
+
 	yes | LC_ALL=en_US.UTF-8 yay --needed -S zsh-syntax-highlighting light i3lock-fancy-git google-chrome 										   ttf-dejavu-sans-mono-powerline-git polybar antigen-git |& tee -a ~/yay-log\ "$Data".log
-	
+
 ############################################### @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # Creating folders and downloading new files  # @ Tworzenie folderów oraz pobieranie nowych plików @
 ############################################### @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -118,7 +118,7 @@
 		sudo cp -r ~/blackarrow/blackarrow/.themes ~/
 		sudo cp -r ~/blackarrow/blackarrow/themes/oomox-numix /usr/share/themes
 		sudo cp -r ~/blackarrow/blackarrow/backgrounds /usr/share/
-		sudo cp -r ~/blackarrow/blackarrow/lightdm /etc 
+		sudo cp -r ~/blackarrow/blackarrow/lightdm /etc
 		sudo cp -r ~/blackarrow/blackarrow/fonts/* ~/.local/share/fonts/
 			#.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/dmenu ~/.config
