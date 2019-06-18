@@ -76,7 +76,7 @@
 		mkdir OldC &> /dev/null
 		mkdir OldC/moved\ "$Date"
 	mv ~/blackarrow ~/OldC/moved\ "$Date"
-	git clone https://gitlab.com/xXBlackMaskXx/blackarrow
+	git clone https://gitlab.com/xXBlackMaskXx/blackarrow2
 	git submodule update --init --recursive
 
 ################ @@@@@@@@@@@@@@@@@@@@@@@

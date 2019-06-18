@@ -55,7 +55,7 @@
 		#FAQ
 
 	if cd ~/ &> /dev/null; then echo ""; else echo "Fail: cd ~/"; fi
-	git clone https://gitlab.com/xXBlackMaskXx/blackarrow
+	git clone https://gitlab.com/xXBlackMaskXx/blackarrow2
 	cd ~/blackarrow && git submodule update --init --recursive && cd - || echo "not working"
 	clear
 
@@ -166,6 +166,7 @@
 		sudo mv /usr/lib/sddm ~/OldC
 		sudo mv /usr/share/sddm/themes/chili/ ~/OldC
 			#.config
+			sudp mv ~/.config/qt5ct ~/OldC
 			sudo mv ~/.config/dunst ~/OldC
 			sudo mv ~/.config/dmenu ~/OldC
 			sudo mv ~/.config/gsimplecal/ ~/OldC
@@ -198,6 +199,7 @@
 			mkdir ~/.local/share/fonts
 		sudo cp ~/blackarrow/blackarrow/fonts/* ~/.local/share/fonts/
 			#.config
+			sudo cp -r ~/blackarrow/blackarrow/.config/qt5ct ~/.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/dunst ~/.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/dmenu ~/.config
 			sudo cp -r ~/blackarrow/blackarrow/.config/gsimplecal ~/.config
