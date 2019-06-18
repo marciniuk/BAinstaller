@@ -183,38 +183,38 @@
 			sudo mv /etc/X11/xorg.conf.d/30-touchpad.conf/ ~/OldC
 			sudo mv /usr/bin/i3lock-fancy/ ~/OldC
 	#Moving @Przenoszenie
-	if cd ~/blackarrow/blackarrow/ 2> /dev/null; then echo ""; else echo "Fail: cd ~/blackarrow/blackarrow/"; fi
+	if cd ~/blackarrow2/blackarrow/ 2> /dev/null; then echo ""; else echo "Fail: cd ~/blackarrow2/blackarrow/"; fi
 		sudo cp .profile ~/
 		sudo cp .xprofile ~/
 		sudo cp .Xresources ~/
 		sudo cp .zshrc ~/
 		sudo cp .gtkrc-2.0 ~/
-		sudo cp -r ~/blackarrow/blackarrow/sddm /usr/lib/sddm
-		sudo cp -r ~/blackarrow/blackarrow/chili /usr/share/sddm/themes/chili
-		sudo cp -r ~/blackarrow/blackarrow/.scripts ~/
-		sudo cp -r ~/blackarrow/blackarrow/.themes ~/
-		sudo cp -r ~/blackarrow/blackarrow/backgrounds /usr/share/
+		sudo cp -r ~/blackarrow2/blackarrow/sddm /usr/lib/sddm
+		sudo cp -r ~/blackarrow2/blackarrow/chili /usr/share/sddm/themes/chili
+		sudo cp -r ~/blackarrow2/blackarrow/.scripts ~/
+		sudo cp -r ~/blackarrow2/blackarrow/.themes ~/
+		sudo cp -r ~/blackarrow2/blackarrow/backgrounds /usr/share/
 			mkdir ~/.local
 			mkdir ~/.local/share
 			mkdir ~/.local/share/fonts
-		sudo cp ~/blackarrow/blackarrow/fonts/* ~/.local/share/fonts/
+		sudo cp ~/blackarrow2/blackarrow/fonts/* ~/.local/share/fonts/
 			#.config
-			sudo cp -r ~/blackarrow/blackarrow/.config/qt5ct ~/.config
-			sudo cp -r ~/blackarrow/blackarrow/.config/dunst ~/.config
-			sudo cp -r ~/blackarrow/blackarrow/.config/dmenu ~/.config
-			sudo cp -r ~/blackarrow/blackarrow/.config/gsimplecal ~/.config
-			sudo cp -r ~/blackarrow/blackarrow/.config/i3/ ~/.config
-			sudo cp -r ~/blackarrow/blackarrow/.config/polybar/ ~/.config
-			sudo cp -r ~/blackarrow/blackarrow/.config/termite/ ~/.config
-			sudo cp -r ~/blackarrow/blackarrow/.config/rofi/ ~/.config
-			sudo cp -r ~/blackarrow/blackarrow/.config/ranger/ ~/.config
-			sudo cp -r ~/blackarrow/blackarrow/.config/neofetch/ ~/.config
-			sudo cp -r ~/blackarrow/blackarrow/.config/gtk-3.0/ ~/.config
-			sudo cp -r ~/blackarrow/blackarrow/.config/compton.conf ~/.config
-			sudo cp -r ~/blackarrow/blackarrow/.config/nvim ~/.config
-			sudo cp ~/blackarrow/blackarrow/lock.service/ /etc/systemd/system/
-			sudo cp ~/blackarrow/blackarrow/30-touchpad.conf/ /etc/X11/xorg.conf.d/
-			sudo cp ~/blackarrow/blackarrow/i3lock-fancy/ /usr/bin/i3lock-fancy/
+			sudo cp -r ~/blackarrow2/blackarrow/.config/qt5ct ~/.config
+			sudo cp -r ~/blackarrow2/blackarrow/.config/dunst ~/.config
+			sudo cp -r ~/blackarrow2/blackarrow/.config/dmenu ~/.config
+			sudo cp -r ~/blackarrow2/blackarrow/.config/gsimplecal ~/.config
+			sudo cp -r ~/blackarrow2/blackarrow/.config/i3/ ~/.config
+			sudo cp -r ~/blackarrow2/blackarrow/.config/polybar/ ~/.config
+			sudo cp -r ~/blackarrow2/blackarrow/.config/termite/ ~/.config
+			sudo cp -r ~/blackarrow2/blackarrow/.config/rofi/ ~/.config
+			sudo cp -r ~/blackarrow2/blackarrow/.config/ranger/ ~/.config
+			sudo cp -r ~/blackarrow2/blackarrow/.config/neofetch/ ~/.config
+			sudo cp -r ~/blackarrow2/blackarrow/.config/gtk-3.0/ ~/.config
+			sudo cp -r ~/blackarrow2/blackarrow/.config/compton.conf ~/.config
+			sudo cp -r ~/blackarrow2/blackarrow/.config/nvim ~/.config
+			sudo cp ~/blackarrow2/blackarrow/lock.service/ /etc/systemd/system/
+			sudo cp ~/blackarrow2/blackarrow/30-touchpad.conf/ /etc/X11/xorg.conf.d/
+			sudo cp ~/blackarrow2/blackarrow/i3lock-fancy/ /usr/bin/i3lock-fancy/
 				sudo mkdir ~/.config/nvim/bundle && cd ~/.config/nvim/bundle && sudo chown -R "$USER" ~/.config
 					git clone https://github.com/tpope/vim-commentary
 					git clone https://github.com/Shougo/deoplete.nvim
@@ -229,7 +229,7 @@
 					git clone https://github.com/reedes/vim-pencil
 					git clone https://github.com/tpope/vim-speeddating
 					git clone https://github.com/bronson/vim-trailing-whitespace
-					cp -r ~/blackarrow/blackarrow/.config/lightline-biual ~/.config/nvim/bundle
+					cp -r ~/blackarrow2/blackarrow/.config/lightline-biual ~/.config/nvim/bundle
 	#Granting permissions @Przyznawanie uprawnień
 	if cd ~/ &> /dev/null; then echo ""; else echo "Fail: cd ~/"; fi
 		sudo chown -R "$USER" ~/OldC
