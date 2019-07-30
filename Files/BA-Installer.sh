@@ -179,7 +179,7 @@
 			sudo mv ~/.config/gtk-3.0/ ~/OldC
 			sudo mv ~/.config/compton.conf ~/OldC
 			sudo mv ~/.config/nvim/ ~/OldC
-			sudo mv /etc/systemd/system/lock.service/ ~/OldC
+			sudo mv /etc/systemd/logind.conf ~/OldC
 			sudo mv /etc/X11/xorg.conf.d/30-touchpad.conf/ ~/OldC
 			sudo mv /usr/bin/i3lock-fancy/ ~/OldC
 	#Moving @Przenoszenie
@@ -212,7 +212,7 @@
 			sudo cp -r ~/blackarrow2/blackarrow/.config/gtk-3.0/ ~/.config
 			sudo cp -r ~/blackarrow2/blackarrow/.config/compton.conf ~/.config
 			sudo cp -r ~/blackarrow2/blackarrow/.config/nvim ~/.config
-			sudo cp ~/blackarrow2/blackarrow/lock.service/ /etc/systemd/system/
+			sudo cp ~/blackarrow2/blackarrow/logind.conf/ /etc/systemd/
 			sudo cp ~/blackarrow2/blackarrow/30-touchpad.conf/ /etc/X11/xorg.conf.d/
 			sudo cp ~/blackarrow2/blackarrow/i3lock-fancy/ /usr/bin/i3lock-fancy/
 				sudo mkdir ~/.config/nvim/bundle && cd ~/.config/nvim/bundle && sudo chown -R "$USER" ~/.config
