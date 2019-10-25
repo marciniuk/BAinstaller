@@ -280,7 +280,6 @@
 ########## @@@@@@@@@@@@@@@
 	echo "${black}${blue_bg}${bold} BlackArrow installer 6/6 - Ending ${reset}
 	"
-
 	echo "${bold}
 	                      ##
 	                     ####
