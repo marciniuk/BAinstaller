@@ -109,7 +109,7 @@
 		#FAQ
 
 	yay
-	sudo pacman --needed -S clipmenu pamixer wget xclip kirigami2 xorg-xrdb xwallpaper htop lxappearance sddm qt5ct qt5-styleplugins xdotool noto-fonts-cjk sxiv mpv maim light i3-gaps xss-lock noto-fonts-emoji dunst wireless_tools python-pip compton termite thunar pamixer papirus-icon-theme telegram-desktop rofi ttf-dejavu neovim zsh polkit-gnome unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs |& tee -a ~/yay-log\ "$Data".log
+	sudo pacman --needed -S clipmenu pamixer wget xclip kirigami2 xorg-xrdb xwallpaper htop lxappearance sddm qt5ct qt5-styleplugins xdotool noto-fonts-cjk sxiv mpv maim light i3-gaps xss-lock noto-fonts-emoji dunst wireless_tools python-pip picom termite thunar pamixer papirus-icon-theme telegram-desktop rofi ttf-dejavu neovim zsh polkit-gnome unclutter xcape pacman-contrib gsimplecal gnome-font-viewer zsh-syntax-highlighting neofetch figlet lolcat xorg-server xdg-user-dirs |& tee -a ~/yay-log\ "$Data".log
 	clear
 
 
@@ -177,7 +177,7 @@
 			sudo mv ~/.config/ranger/ ~/OldC
 			sudo mv ~/.config/neofetch/ ~/OldC
 			sudo mv ~/.config/gtk-3.0/ ~/OldC
-			sudo mv ~/.config/compton.conf ~/OldC
+			sudo mv ~/.config/picom.conf ~/OldC
 			sudo mv ~/.config/nvim/ ~/OldC
 			sudo mv /etc/systemd/logind.conf ~/OldC
 			sudo mv /etc/X11/xorg.conf.d/30-touchpad.conf/ ~/OldC
@@ -210,7 +210,7 @@
 			sudo cp -r ~/blackarrow2/blackarrow/.config/ranger/ ~/.config
 			sudo cp -r ~/blackarrow2/blackarrow/.config/neofetch/ ~/.config
 			sudo cp -r ~/blackarrow2/blackarrow/.config/gtk-3.0/ ~/.config
-			sudo cp -r ~/blackarrow2/blackarrow/.config/compton.conf ~/.config
+			sudo cp -r ~/blackarrow2/blackarrow/.config/picom.conf ~/.config
 			sudo cp -r ~/blackarrow2/blackarrow/.config/nvim ~/.config
 			sudo cp ~/blackarrow2/blackarrow/logind.conf/ /etc/systemd/
 			sudo cp ~/blackarrow2/blackarrow/30-touchpad.conf/ /etc/X11/xorg.conf.d/
