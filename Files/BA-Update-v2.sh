@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # ____    _       ____             __ _         _   _           _       _
 #| __ )  / \     / ___|___  _ __  / _(_) __ _  | | | |_ __   __| | __ _| |_ ___
@@ -7,6 +7,8 @@
 #|____/_/   \_\  \____\___/|_| |_|_| |_|\__, |  \___/| .__/ \__,_|\__,_|\__\___|
 #                                       |___/        |_|
 #
+
+echo "It doesn't work. I need to fix the script. Use the installer. It will probably work." && exit
 
 ##################### @@@@@@@@@@@@@@@@@@@@@@@@
 # Color definitions # @ Definiowanie kolorów @
@@ -74,8 +76,8 @@
 
 	if cd ~/ &> /dev/null; then echo ""; else echo "Fail: cd ~/"; fi
 		mkdir OldC &> /dev/null
-		mkdir OldC/moved\ "$Date"
-	mv ~/blackarrow ~/OldC/moved\ "$Date"
+		mkdir OldC/moved\ "$Data"
+	mv ~/blackarrow ~/OldC/moved\ "$Data"
 	git clone https://gitlab.com/xXBlackMaskXx/blackarrow2
 	git submodule update --init --recursive
 
